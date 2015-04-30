@@ -36,7 +36,8 @@
       "length",
       "trunc",
       "trim",
-      "kebab-case"
+      "kebab-case",
+      "replace"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
