@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^3.7.0",
-    "machine": "^4.0.5"
+    "machine": "^4.0.5",
+    "hat": "0.0.3"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^0.2.3"
@@ -24,11 +25,11 @@
     "machineDir": "machines/",
     "machines": [
       "concat",
-      "convert-to-camel-case",
       "convert-to-string",
-      "generate-random-alphanumeric",
-      "generate-unique-token",
-      "search-using-regexp"
+      "camel-case",
+      "match",
+      "unique",
+      "random"
     ],
     "testsUrl": "https://travis-ci.org/"
   },

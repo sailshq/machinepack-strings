@@ -10,7 +10,7 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     success: {
-      description: 'Generated alphanumeric string',
+      description: 'Generated probablistically unique alphanumeric string',
       example: '1a17d9af25aef464b46481d901ba2005'
     }
   },
