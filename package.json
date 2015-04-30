@@ -12,7 +12,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "dependencies":{
+  "dependencies": {
     "machine": "^4.0.0"
   },
   "devDependencies": {
@@ -21,6 +21,11 @@
   "machinepack": {
     "friendlyName": "Strings",
     "machineDir": "machines/",
-    "machines": []
+    "machines": [],
+    "testsUrl": "https://travis-ci.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
   }
 }
