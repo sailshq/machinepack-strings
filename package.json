@@ -34,7 +34,8 @@
       "upper-case",
       "capitalize",
       "length",
-      "trunc"
+      "trunc",
+      "trim"
     ],
     "testsUrl": "https://travis-ci.org/"
   },

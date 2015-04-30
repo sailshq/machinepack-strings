@@ -1,0 +1,31 @@
+{
+  "machine": "trim",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "string": "  yo ho ho          "
+      },
+      "outcome": "success",
+      "returns": "yo ho ho"
+    },
+    {
+      "using": {
+        "string": "yo ho ho          ho      "
+      },
+      "outcome": "success",
+      "returns": "yo ho ho          ho"
+    },
+    {
+      "using": {
+        "string": "        hey           yo ho ho          ho"
+      },
+      "outcome": "success",
+      "returns": "hey           yo ho ho          ho"
+    }
+  ]
+}
