@@ -22,7 +22,14 @@
   "machinepack": {
     "friendlyName": "Strings",
     "machineDir": "machines/",
-    "machines": [],
+    "machines": [
+      "concat",
+      "convert-to-camel-case",
+      "convert-to-string",
+      "generate-random-alphanumeric",
+      "generate-unique-token",
+      "search-using-regexp"
+    ],
     "testsUrl": "https://travis-ci.org/"
   },
   "repository": {
