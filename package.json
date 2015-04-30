@@ -10,13 +10,14 @@
     "machines",
     "machinepack"
   ],
-  "author": "",
+  "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
-    "machine": "^4.0.0"
+    "lodash": "^3.7.0",
+    "machine": "^4.0.5"
   },
   "devDependencies": {
-    "test-machinepack-mocha": "^0.2.2"
+    "test-machinepack-mocha": "^0.2.3"
   },
   "machinepack": {
     "friendlyName": "Strings",
