@@ -1,0 +1,10 @@
+{
+  "machine": "unique",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}
