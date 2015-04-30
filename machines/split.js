@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Replace using regexp',
+  friendlyName: 'Split using regexp',
 
 
-  description: 'Replace parts of a string that match a given regular expression with the specified replacement.',
+  description: 'Split a string into an array of strings using a regular expression.',
 
 
   sync: true,
@@ -18,23 +18,15 @@ module.exports = {
     string: {
       friendlyName: 'String',
       example: 'Hello world!',
-      description: 'The string to modify.',
+      description: 'The string to split.',
       required: true
     },
 
     regexp: {
       friendlyName: 'Regular expression',
-      example: 'World',
-      description: 'The regular expression to match against (i.e. "metal detector")',
+      example: '\\s',
+      description: 'The regular expression for detecting delimiters which mark the end of each string segment.',
       extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
-      required: true
-    },
-
-    replacement: {
-      friendlyName: 'Replacement',
-      description: 'The string to use when replacing matches.',
-      extendedDescription: 'Note that you can use match expressions (e.g. "$1", "$2", etc.) to express the values of capture groups.',
-      example: 'Mumbai',
       required: true
     },
 
@@ -54,8 +46,8 @@ module.exports = {
 
     success: {
       friendlyName: 'then',
-      description: 'Returns the modified string.',
-      example: 'Hello Mumbai!'
+      description: 'Returns an array of substrings.',
+      example: ['Hello']
     },
 
     invalidRegexp: {
@@ -109,9 +101,9 @@ module.exports = {
       return exits.invalidRegexp(e);
     }
 
-    var newString = inputs.string.replace(regexp, inputs.replacement);
+    var substrings = inputs.string.split(regexp);
 
-    return exits.success(newString);
+    return exits.success(substrings);
 
   }
 

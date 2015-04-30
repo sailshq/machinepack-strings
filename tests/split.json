@@ -1,0 +1,36 @@
+{
+  "machine": "split",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "string": "What's the deal with airline food?",
+        "regexp": "\\s+"
+      },
+      "outcome": "success",
+      "returns": [
+        "What's",
+        "the",
+        "deal",
+        "with",
+        "airline",
+        "food?"
+      ]
+    },
+    {
+      "using": {
+        "string": "What's the deal with airline food?",
+        "regexp": "oo"
+      },
+      "outcome": "success",
+      "returns": [
+        "What's the deal with airline f",
+        "d?"
+      ]
+    }
+  ]
+}
