@@ -30,7 +30,8 @@
       "unique",
       "random",
       "construct",
-      "lower-case"
+      "lower-case",
+      "upper-case"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
