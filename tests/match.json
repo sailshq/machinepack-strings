@@ -5,6 +5,48 @@
       "todo": true,
       "using": {},
       "outcome": "success"
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?",
+        "regexp": "abc"
+      },
+      "outcome": "notFound"
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?",
+        "regexp": "three"
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "Three",
+        "at": "0"
+      }
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?",
+        "regexp": "three",
+        "caseInsensitive": "false"
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "three",
+        "at": "18"
+      }
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?",
+        "regexp": "three",
+        "caseInsensitive": "true"
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "Three",
+        "at": "0"
+      }
     }
   ]
 }

@@ -26,7 +26,7 @@ module.exports = {
       friendlyName: 'Regular expression',
       example: 'world',
       description: 'The regular expression to match against (i.e. "metal detector")',
-      extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi. It will be escaped automatically using `_.escapeRegExp()`',
+      extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
       required: true
     },
 
@@ -85,8 +85,15 @@ module.exports = {
     // Check that the regexp is valid
     var regexp;
     try {
+
+      /////////////////////////////////////////////////////////
+      // Skip this-- we want users to be able to provide an actual
+      // regexp with all the things (i.e. should be able to use the
+      // star and dot and ? operators, etc)
+      /////////////////////////////////////////////////////////
       // Then escape the provided string before instantiating
-      regexp = _.escapeRegExp(inputs.regexp);
+      // regexp = _.escapeRegExp(inputs.regexp);
+      /////////////////////////////////////////////////////////
 
       // Then construct it
       // (and if relevant, enable case-insensitivity)
