@@ -25,11 +25,11 @@
     "machineDir": "machines/",
     "machines": [
       "concat",
-      "convert-to-string",
       "camel-case",
       "match",
       "unique",
-      "random"
+      "random",
+      "construct"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
