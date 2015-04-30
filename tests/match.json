@@ -58,6 +58,28 @@
         "found": "run?yeah",
         "at": "50"
       }
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?",
+        "regexp": "mi.e\\."
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "mice.",
+        "at": "30"
+      }
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?",
+        "regexp": "mi.e"
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "mice",
+        "at": "12"
+      }
     }
   ]
 }
