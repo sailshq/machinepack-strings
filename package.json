@@ -29,7 +29,8 @@
       "match",
       "unique",
       "random",
-      "construct"
+      "construct",
+      "lower-case"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
