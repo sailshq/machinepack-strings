@@ -1,0 +1,26 @@
+{
+  "name": "machinepack-strings",
+  "version": "0.1.0",
+  "description": "Work with strings.",
+  "scripts": {
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
+  },
+  "keywords": [
+    "Strings",
+    "machines",
+    "machinepack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies":{
+    "machine": "^4.0.0"
+  },
+  "devDependencies": {
+    "test-machinepack-mocha": "^0.2.2"
+  },
+  "machinepack": {
+    "friendlyName": "Strings",
+    "machineDir": "machines/",
+    "machines": []
+  }
+}
