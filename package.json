@@ -31,7 +31,9 @@
       "random",
       "construct",
       "lower-case",
-      "upper-case"
+      "upper-case",
+      "capitalize",
+      "length"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
