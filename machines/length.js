@@ -17,11 +17,13 @@ module.exports = {
 
 
   inputs: {
+
     string: {
       example: 'guido villeriño',
       description: 'The string whose characters will be counted.',
       required: true
     }
+
   },
 
 

@@ -33,7 +33,8 @@
       "lower-case",
       "upper-case",
       "capitalize",
-      "length"
+      "length",
+      "trunc"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
