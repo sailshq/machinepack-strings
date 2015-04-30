@@ -18,6 +18,7 @@ module.exports = {
 
   inputs: {
     string: {
+      friendlyName: 'String',
       example: 'foo-bar-baz',
       description: 'The string to convert (dash-delimited or otherwise)',
       required: true
