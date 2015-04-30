@@ -1,0 +1,24 @@
+{
+  "machine": "length",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "string": "A horse is a horse, of course, of course."
+      },
+      "outcome": "success",
+      "returns": "41"
+    },
+    {
+      "using": {
+        "string": "2935235"
+      },
+      "outcome": "success",
+      "returns": "7"
+    }
+  ]
+}
