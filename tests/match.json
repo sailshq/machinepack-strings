@@ -47,6 +47,17 @@
         "found": "Three",
         "at": "0"
       }
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?yeah",
+        "regexp": "run\\?yeah"
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "run?yeah",
+        "at": "50"
+      }
     }
   ]
 }

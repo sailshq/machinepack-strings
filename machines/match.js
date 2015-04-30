@@ -86,13 +86,15 @@ module.exports = {
     var regexp;
     try {
 
+      regexp = inputs.regexp;
+
       /////////////////////////////////////////////////////////
       // Skip this-- we want users to be able to provide an actual
       // regexp with all the things (i.e. should be able to use the
       // star and dot and ? operators, etc)
       /////////////////////////////////////////////////////////
       // Then escape the provided string before instantiating
-      // regexp = _.escapeRegExp(inputs.regexp);
+      // regexp = _.escapeRegExp(regexp);
       /////////////////////////////////////////////////////////
 
       // Then construct it
