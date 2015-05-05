@@ -8,7 +8,7 @@
 Work with strings.
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-strings.svg)](http://badge.fury.io/js/machinepack-strings) [![Build Status](https://travis-ci.org/mikermcneil/machinepack-strings.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-strings)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-strings.svg)](http://badge.fury.io/js/machinepack-strings) [![Build Status](https://travis-ci.org/treelinehq/machinepack-strings.png?branch=master)](https://travis-ci.org/treelinehq/machinepack-strings)
 
 ```sh
 $ npm install machinepack-strings
