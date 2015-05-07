@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'Uppercase a string',
 
 
-  description: 'Convert lowercase letters to uppercase in the specified string.',
+  description: 'Convert all lowercase letters to uppercase in the specified string.',
 
 
   extendedDescription: 'Returns a version of the string with uppercase characters replaced with lowercase characters -- this is equivalent to using `toUpperCase()` in JavaScript.',
