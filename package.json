@@ -39,7 +39,9 @@
       "kebab-case",
       "replace",
       "split",
-      "deburr"
+      "deburr",
+      "slice",
+      "at"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
