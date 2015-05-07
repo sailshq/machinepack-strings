@@ -2,11 +2,6 @@
   "machine": "capitalize",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "guido"
       },
@@ -26,6 +21,29 @@
       },
       "outcome": "success",
       "returns": "---would you look at all those dashes?!!?"
+    },
+    {
+      "using": {
+        "string": "villeriño"
+      },
+      "outcome": "success",
+      "returns": "Villeriño"
+    },
+    {
+      "using": {
+        "string": "villeriño",
+        "at": "7"
+      },
+      "outcome": "success",
+      "returns": "villeriÑo"
+    },
+    {
+      "using": {
+        "string": "villeriño",
+        "at": "2"
+      },
+      "outcome": "success",
+      "returns": "viLleriño"
     }
   ]
 }
