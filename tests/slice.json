@@ -27,6 +27,14 @@
       },
       "outcome": "success",
       "returns": "lly McGee"
+    },
+    {
+      "using": {
+        "string": "Molly McGee",
+        "start": "2"
+      },
+      "outcome": "success",
+      "returns": "lly McGee"
     }
   ]
 }
