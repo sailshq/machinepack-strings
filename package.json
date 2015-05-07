@@ -38,7 +38,8 @@
       "trim",
       "kebab-case",
       "replace",
-      "split"
+      "split",
+      "deburr"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
