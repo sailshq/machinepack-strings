@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Get length of string',
+  friendlyName: 'Length',
 
 
-  description: 'Determine the length of a string (i.e. the number of characters)',
+  description: 'Determine the length of a string (i.e. count the number of characters)',
 
 
   extendedDescription: '',
