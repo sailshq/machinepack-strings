@@ -62,7 +62,7 @@ module.exports = {
       return exits.error('`start` index must be least zero.');
     }
     if (_.isUndefined(inputs.end)) {
-      return exits.success(_.slice(inputs.string, inputs.start));
+      return exits.success(inputs.string.slice(inputs.start));
     }
 
     if (inputs.end < 0) {
