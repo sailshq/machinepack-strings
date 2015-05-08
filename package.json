@@ -24,7 +24,6 @@
     "friendlyName": "Strings",
     "machineDir": "machines/",
     "machines": [
-      "concat",
       "camel-case",
       "match",
       "unique",
@@ -41,7 +40,8 @@
       "split",
       "deburr",
       "slice",
-      "at"
+      "at",
+      "join"
     ],
     "testsUrl": "https://travis-ci.org/"
   },

@@ -1,31 +1,47 @@
 module.exports = {
+
+
   friendlyName: 'Combine strings',
-  description: 'Concatenate an array of strings into one new string.',
-  extendedDescription: '',
+
+
+  description: 'Join an array of strings into one new string.',
+
+
   sync: true,
+
+
   cacheable: true,
+
+
   inputs: {
+
     strings: {
       description: 'The array of strings to join',
       example: ['foo'],
       required: true
-    }
-  },
-  defaultExit: 'success',
-  exits: {
-    error: {
-      description: 'Unexpected error occurred.'
     },
+
+    separator: {
+      description: 'The separator to insert between each string (by default, empty string)',
+      defaultsTo: '',
+      example: ','
+    }
+
+  },
+
+
+  exits: {
+
     success: {
       description: 'Returns the concatenated result.',
       example: 'foo'
     }
+
   },
+
+
   fn: function(inputs, exits) {
-    var result = '';
-    for (var i = 0; i < inputs.strings.length; i++){
-      result += inputs.strings[i];
-    }
+    var result = inputs.strings.join(inputs.separator||'');
     return exits.success(result);
   },
 
