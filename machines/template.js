@@ -52,6 +52,7 @@ module.exports = {
     missingData: {
       friendlyName: 'missing data',
       description: 'One or more variables used in the template were not provided in the template data.',
+      variableName: 'info',
       example: {
         message: 'Some variables (`me`,`friends`) were used in template "/code/machine/docs/.type-table.tpl", but not provided in the template data dictionary.',
         missingVariables: ['me', 'friends']
