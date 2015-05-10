@@ -18,7 +18,7 @@ module.exports = {
 
   inputs: {
 
-    string: {
+    templateStr: {
       friendlyName: 'Template string',
       description: 'The string to use as a template.',
       example: 'Hi there, Miss <%= me.name %>!',
@@ -98,12 +98,12 @@ module.exports = {
 
       try {
         // Attempt to render template and data into a single string using Lodash
-        result = _.template(contents, dataWithFakeValues, {
+        result = _.template(inputs.templateStr, {
           imports: {
             util: util,
             _: _
           }
-        });
+        })(dataWithFakeValues);
 
         // If we made it here, there were no errors rendering the template.
         morePotentiallyActionableErrorsExist = false;
@@ -132,9 +132,14 @@ module.exports = {
       }
     }
 
+
     // If at least one missing variable was found, show it and use the
     // `missingData` exit.
     if (missingVars.length > 0) {
+
+      // There should never be duplicates, but just in case:
+      missingVars = _.uniq(missingVars);
+
       return exits.missingData({
         message: util.format('%s were used in template "%s", but not provided in the template data dictionary.', (missingVars.length>1?'Some variables':'A variable') + ' (' + _.map(missingVars, function (varName){return '`'+varName+'`';}).join(',')+')', inputs.source),
         missingVariables: missingVars
@@ -142,9 +147,11 @@ module.exports = {
     }
     // Otherwise if the only template error was some other unrecognized thing,
     // exit out of the `couldNotRender` exit.
-    if (mostRecentTemplateErr) {
+    else if (mostRecentTemplateErr) {
       return exits.couldNotRender(mostRecentTemplateErr);
     }
+
+    // If we made it here, everything w/ the _.template() call worked.
 
     // With lodash teplates, HTML entities are escaped by default.
     // Default assumption is we DON'T want that, so we'll reverse it.
@@ -157,7 +164,6 @@ module.exports = {
       return exits.error(e);
     }
 
-    // If we made it here, everything worked.
     // Return the rendered result string.
     return exits.success(result);
 
