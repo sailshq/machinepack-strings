@@ -37,12 +37,6 @@ module.exports = {
       //   },
       //   projectName: 'Bikrosoft (Confidential)'
       // }
-    },
-
-    escapeHTMLEntities: {
-      description: 'Whether or not to escape HTML entities',
-      example: false,
-      defaultsTo: false
     }
 
   },
@@ -152,18 +146,6 @@ module.exports = {
     }
 
     // If we made it here, everything w/ the _.template() call worked.
-
-    // With lodash teplates, HTML entities are escaped by default.
-    // Default assumption is we DON'T want that, so we'll reverse it.
-    try {
-      if (!inputs.escapeHTMLEntities) {
-        result = _.unescape(result);
-      }
-    }
-    catch (e) {
-      return exits.error(e);
-    }
-
     // Return the rendered result string.
     return exits.success(result);
 
