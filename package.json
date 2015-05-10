@@ -41,7 +41,8 @@
       "deburr",
       "slice",
       "at",
-      "join"
+      "join",
+      "template"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
