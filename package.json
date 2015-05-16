@@ -27,7 +27,6 @@
       "camel-case",
       "match",
       "unique",
-      "random",
       "construct",
       "lower-case",
       "upper-case",

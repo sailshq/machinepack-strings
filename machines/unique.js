@@ -6,7 +6,10 @@ module.exports = {
   description: 'Generate a alphanumeric string which is probabalistically-unique.',
 
 
-  extendedDescription: 'Internally, this machine uses the [hat](https://github.com/substack/node-hat) package from [Substack](https://github.com/substack).',
+  extendedDescription: 'Internally, this machine uses the [hat](https://github.com/substack/node-hat) package from [Substack](https://github.com/substack).  If you are interested in learning more about psuedo-random number/string generators, you might be interested in reading the Wikipedia list of [random number generator algorithms](http://en.wikipedia.org/wiki/List_of_random_number_generators).',
+
+
+  moreInfoUrl: 'https://github.com/substack/node-hat',
 
 
   sync: true,
