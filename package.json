@@ -41,7 +41,8 @@
       "at",
       "join",
       "template",
-      "unique"
+      "unique",
+      "ensure-uniq"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
