@@ -26,7 +26,6 @@
     "machines": [
       "camel-case",
       "match",
-      "unique",
       "construct",
       "lower-case",
       "upper-case",
@@ -41,7 +40,8 @@
       "slice",
       "at",
       "join",
-      "template"
+      "template",
+      "uniq"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
