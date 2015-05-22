@@ -105,10 +105,11 @@ module.exports = {
 
       }
       catch (e) {
-
         // Recognize lodash template error (scope variable not defined)
         var isTplError = _.isObject(e) && (e.name === 'ReferenceError' || e.type === 'not_defined');
-        var missingVar = _.isArray(e.arguments) && e.arguments[0];
+        // In Node v0.10.x, the error will have a handy arguments array.  In Node v0.12.0, we'll have to
+        // pull the missing var from the error message, where it'll be the first word
+        var missingVar = (_.isArray(e.arguments) && e.arguments[0]) || (e.message.split(' ')[0]);
 
         // If this is not a recognizable missing variable error, or if
         // the name of the scope variable cannot be determined, then
