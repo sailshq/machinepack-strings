@@ -38,7 +38,7 @@ module.exports = {
 
     // Generate and return the new probably-unique token.
     var token = module.exports._rack();
-    return exits.success(rack());
+    return exits.success(token);
   }
 
 };
