@@ -13,12 +13,12 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
+    "hat": "0.0.3",
     "lodash": "^3.7.0",
-    "machine": "^4.0.5",
-    "hat": "0.0.3"
+    "machine": "^9.0.1"
   },
   "devDependencies": {
-    "test-machinepack-mocha": "^0.2.2"
+    "test-machinepack-mocha": "^1.0.0"
   },
   "machinepack": {
     "friendlyName": "Strings",
