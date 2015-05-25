@@ -7,7 +7,7 @@ module.exports = {
   inputs: {
     value: {
       description: 'The value to convert',
-      typeclass: '*',
+      example: '===',
       required: true
     }
   },
