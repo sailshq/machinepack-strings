@@ -44,9 +44,6 @@ module.exports = {
   },
 
 
-  defaultExit: 'success',
-
-
   exits: {
 
     error: {
@@ -63,16 +60,6 @@ module.exports = {
 
   fn: function (inputs,exits) {
     var _ = require('lodash');
-
-    if (_.isUndefined(inputs.maxLength)) {
-      inputs.maxLength = 30;
-    }
-    if (_.isUndefined(inputs.omission)) {
-      inputs.omission = '...';
-    }
-    if (_.isUndefined(inputs.pretty)) {
-      inputs.pretty = true;
-    }
 
     var opts = {
       length: inputs.maxLength,

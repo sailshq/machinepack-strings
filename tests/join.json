@@ -20,7 +20,7 @@
         "strings": "[3, 4]"
       },
       "outcome": "success",
-      "returns": "34"
+      "returns": "\"34\""
     },
     {
       "using": {

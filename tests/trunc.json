@@ -19,10 +19,10 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "63"
+        "maxLength": "60"
       },
       "outcome": "success",
-      "returns": "Note that the inputs below are only relatively intelligent..."
+      "returns": "Note that the inputs below are only relatively..."
     },
     {
       "using": {
