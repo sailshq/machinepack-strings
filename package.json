@@ -1,6 +1,6 @@
 {
   "name": "machinepack-strings",
-  "version": "4.1.2",
+  "version": "4.1.3",
   "description": "Work with strings.",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
