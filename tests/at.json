@@ -4,7 +4,7 @@
     {
       "using": {
         "string": "villeriño",
-        "at": "0"
+        "at": 0
       },
       "outcome": "success",
       "returns": "v"
@@ -12,7 +12,7 @@
     {
       "using": {
         "string": "villeriño",
-        "at": "7"
+        "at": 7
       },
       "outcome": "success",
       "returns": "ñ"

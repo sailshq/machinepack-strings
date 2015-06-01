@@ -4,8 +4,8 @@
     {
       "using": {
         "string": "Molly McGee",
-        "start": "0",
-        "end": "2"
+        "start": 0,
+        "end": 2
       },
       "outcome": "success",
       "returns": "Mol"
@@ -13,8 +13,8 @@
     {
       "using": {
         "string": "Molly McGee",
-        "start": "2",
-        "end": "2"
+        "start": 2,
+        "end": 2
       },
       "outcome": "success",
       "returns": "l"
@@ -22,8 +22,8 @@
     {
       "using": {
         "string": "Molly McGee",
-        "start": "2",
-        "end": "50"
+        "start": 2,
+        "end": 50
       },
       "outcome": "success",
       "returns": "lly McGee"
@@ -31,7 +31,7 @@
     {
       "using": {
         "string": "Molly McGee",
-        "start": "2"
+        "start": 2
       },
       "outcome": "success",
       "returns": "lly McGee"

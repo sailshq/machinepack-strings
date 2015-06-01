@@ -2,11 +2,6 @@
   "machine": "replace",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "Hello world!",
         "regexp": "World",
@@ -47,7 +42,7 @@
         "string": "Hello world!",
         "regexp": "World",
         "replacement": "Mexico City",
-        "caseInsensitive": "false"
+        "caseInsensitive": false
       },
       "outcome": "success",
       "returns": "Hello world!"
@@ -57,7 +52,7 @@
         "string": "Hello world!",
         "regexp": "World",
         "replacement": "Mexico City",
-        "caseInsensitive": "true"
+        "caseInsensitive": true
       },
       "outcome": "success",
       "returns": "Hello Mexico City!"
@@ -67,7 +62,7 @@
         "string": "Hello Mexico City!",
         "regexp": "Mexico\\s*([a-z]+)",
         "replacement": "$1 de Mexico",
-        "caseInsensitive": "true"
+        "caseInsensitive": true
       },
       "outcome": "success",
       "returns": "Hello City de Mexico!"

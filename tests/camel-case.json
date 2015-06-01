@@ -2,11 +2,6 @@
   "machine": "camel-case",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "camel-case-me"
       },
@@ -43,10 +38,10 @@
     },
     {
       "using": {
-        "string": "\"235723857239587235\""
+        "string": "235723857239587235"
       },
       "outcome": "success",
-      "returns": "\"235723857239587235\""
+      "returns": "235723857239587235"
     }
   ]
 }

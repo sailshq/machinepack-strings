@@ -2,11 +2,6 @@
   "machine": "lower-case",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "I'm just a lonely little string..."
       },

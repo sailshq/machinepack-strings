@@ -2,11 +2,6 @@
   "machine": "trim",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "  yo ho ho          "
       },

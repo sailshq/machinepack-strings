@@ -32,7 +32,7 @@
     {
       "using": {
         "string": "villeriño",
-        "at": "7"
+        "at": 7
       },
       "outcome": "success",
       "returns": "villeriÑo"
@@ -40,7 +40,7 @@
     {
       "using": {
         "string": "villeriño",
-        "at": "2"
+        "at": 2
       },
       "outcome": "success",
       "returns": "viLleriño"

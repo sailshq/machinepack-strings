@@ -2,11 +2,6 @@
   "machine": "kebab-case",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "Christian van der Henst"
       },

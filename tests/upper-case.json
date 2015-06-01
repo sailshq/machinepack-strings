@@ -2,11 +2,6 @@
   "machine": "upper-case",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "I'm just a lonely little string...Just hungry for lov3.. SO HUNGRY!!!!!"
       },

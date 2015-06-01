@@ -11,7 +11,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "15"
+        "maxLength": 15
       },
       "outcome": "success",
       "returns": "Note that..."
@@ -19,7 +19,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "60"
+        "maxLength": 60
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively..."
@@ -27,7 +27,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "130"
+        "maxLength": 130
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line..."
@@ -35,7 +35,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "5000"
+        "maxLength": 5000
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)"
@@ -43,7 +43,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "212"
+        "maxLength": 212
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers,..."
@@ -51,7 +51,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "210"
+        "maxLength": 210
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans..."
@@ -59,7 +59,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "210",
+        "maxLength": 210,
         "omission": " [...]"
       },
       "outcome": "success",
@@ -68,8 +68,8 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "209",
-        "pretty": "false"
+        "maxLength": 209,
+        "pretty": false
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbe..."
@@ -77,8 +77,8 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "209",
-        "pretty": "true"
+        "maxLength": 209,
+        "pretty": true
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans..."
@@ -86,7 +86,7 @@
     {
       "using": {
         "string": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans, numbers, or dictionaries/arrays (as JSON)",
-        "maxLength": "209"
+        "maxLength": 209
       },
       "outcome": "success",
       "returns": "Note that the inputs below are only relatively intelligent -- they use the same parsing code as the machinepack command-line tool and therefore follow the same rules in regards to specifying booleans..."

@@ -2,11 +2,6 @@
   "machine": "match",
   "expectations": [
     {
-      "todo": true,
-      "using": {},
-      "outcome": "success"
-    },
-    {
       "using": {
         "string": "Three blind mice, three blind mice.  See how they run?",
         "regexp": "abc"
@@ -28,7 +23,7 @@
       "using": {
         "string": "Three blind mice, three blind mice.  See how they run?",
         "regexp": "three",
-        "caseInsensitive": "false"
+        "caseInsensitive": false
       },
       "outcome": "success",
       "returns": {
@@ -40,7 +35,7 @@
       "using": {
         "string": "Three blind mice, three blind mice.  See how they run?",
         "regexp": "three",
-        "caseInsensitive": "true"
+        "caseInsensitive": true
       },
       "outcome": "success",
       "returns": {

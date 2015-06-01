@@ -4,7 +4,9 @@
     {
       "using": {
         "string": "Siri",
-        "existingStrings": "[\"Siri\"]"
+        "existingStrings": [
+          "Siri"
+        ]
       },
       "outcome": "success",
       "returns": "Siri2"
@@ -12,7 +14,12 @@
     {
       "using": {
         "string": "Siri",
-        "existingStrings": "[\"Siri\", \"Stoltman\", \"Mancini\", \"Vilariño\"]"
+        "existingStrings": [
+          "Siri",
+          "Stoltman",
+          "Mancini",
+          "Vilariño"
+        ]
       },
       "outcome": "success",
       "returns": "Siri2"
@@ -20,7 +27,16 @@
     {
       "using": {
         "string": "Siri",
-        "existingStrings": "[\"Siri\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "Siri2"
@@ -28,7 +44,16 @@
     {
       "using": {
         "string": "Vilariño",
-        "existingStrings": "[\"Siri\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "Vilariño2"
@@ -36,7 +61,17 @@
     {
       "using": {
         "string": "Vilariño",
-        "existingStrings": "[\"Siri\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "Vilariño2"
@@ -44,7 +79,18 @@
     {
       "using": {
         "string": "Siri",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "Siri4"
@@ -52,7 +98,18 @@
     {
       "using": {
         "string": "Mancini",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "Mancini2"
@@ -60,7 +117,18 @@
     {
       "using": {
         "string": "mancini",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "mancini2"
@@ -68,8 +136,19 @@
     {
       "using": {
         "string": "mancini",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]",
-        "caseSensitive": "true"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ],
+        "caseSensitive": true
       },
       "outcome": "success",
       "returns": "mancini"
@@ -77,8 +156,19 @@
     {
       "using": {
         "string": "gress",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]",
-        "caseSensitive": "true"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ],
+        "caseSensitive": true
       },
       "outcome": "success",
       "returns": "gress"
@@ -86,8 +176,19 @@
     {
       "using": {
         "string": "gress",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]",
-        "caseSensitive": "false"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ],
+        "caseSensitive": false
       },
       "outcome": "success",
       "returns": "gress2"
@@ -95,7 +196,18 @@
     {
       "using": {
         "string": "gress",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "gress2"
@@ -103,7 +215,21 @@
     {
       "using": {
         "string": "nathan4",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"nathan2\", \"nathan3\", \"nathan4\", \"Shaw\", \"McNeil\"]"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "nathan2",
+          "nathan3",
+          "nathan4",
+          "Shaw",
+          "McNeil"
+        ]
       },
       "outcome": "success",
       "returns": "nathan5"
@@ -111,8 +237,23 @@
     {
       "using": {
         "string": "mcneil5",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"nathan2\", \"nathan3\", \"nathan4\", \"Shaw\", \"mcneil5\", \"McNeil\"]",
-        "caseSensitive": "true"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "nathan2",
+          "nathan3",
+          "nathan4",
+          "Shaw",
+          "mcneil5",
+          "McNeil"
+        ],
+        "caseSensitive": true
       },
       "outcome": "success",
       "returns": "mcneil6"
@@ -120,8 +261,23 @@
     {
       "using": {
         "string": "mcneil",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"nathan2\", \"nathan3\", \"nathan4\", \"Shaw\", \"mcneil5\", \"McNeil\"]",
-        "caseSensitive": "true"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "nathan2",
+          "nathan3",
+          "nathan4",
+          "Shaw",
+          "mcneil5",
+          "McNeil"
+        ],
+        "caseSensitive": true
       },
       "outcome": "success",
       "returns": "mcneil"
@@ -129,8 +285,23 @@
     {
       "using": {
         "string": "nathan",
-        "existingStrings": "[\"Siri\", \"Siri2\", \"Siri3\", \"Stoltman\", \"Mancini\", \"Vilariño\", \"Gress\", \"Nathan\", \"nathan2\", \"nathan3\", \"nathan4\", \"Shaw\", \"mcneil5\", \"McNeil\"]",
-        "caseSensitive": "true"
+        "existingStrings": [
+          "Siri",
+          "Siri2",
+          "Siri3",
+          "Stoltman",
+          "Mancini",
+          "Vilariño",
+          "Gress",
+          "Nathan",
+          "nathan2",
+          "nathan3",
+          "nathan4",
+          "Shaw",
+          "mcneil5",
+          "McNeil"
+        ],
+        "caseSensitive": true
       },
       "outcome": "success",
       "returns": "nathan"
