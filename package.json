@@ -13,12 +13,18 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
+    "browserify-transform-machinepack": "^1.0.0",
     "hat": "0.0.3",
     "lodash": "^3.9.2",
     "machine": "^9.0.1"
   },
   "devDependencies": {
     "test-machinepack-mocha": "^2.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-transform-machinepack"
+    ]
   },
   "machinepack": {
     "friendlyName": "Strings",
