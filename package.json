@@ -48,7 +48,8 @@
       "join",
       "template",
       "unique",
-      "ensure-uniq"
+      "ensure-uniq",
+      "to-stream"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
