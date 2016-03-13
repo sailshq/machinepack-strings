@@ -17,19 +17,22 @@ module.exports = {
 
 
   inputs: {
+
     value: {
       description: 'The value to convert',
       example: '===',
       readOnly: true,
       required: true
     }
+
   },
 
 
   exits: {
 
     success: {
-      outputDescription: 'The string ',
+      outputFriendlyName: 'String',
+      outputDescription: 'A string constructed from the provided value.',
       example: 'some string'
     }
 
