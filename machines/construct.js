@@ -1,13 +1,13 @@
 module.exports = {
 
 
-  friendlyName: 'Convert to string',
+  friendlyName: 'Construct string',
 
 
-  description: 'Convert the specified value to a string, if it isn\'t one already.',
+  description: 'Cast the specified value to a string, if it isn\'t one already.',
 
 
-  extendedDescription: 'For example, 5 is converted to "5".',
+  extendedDescription: 'Behind the scenes, this uses RTTC data type coercion. For example, 5 is converted to "5".',
 
 
   sync: true,
@@ -20,6 +20,7 @@ module.exports = {
     value: {
       description: 'The value to convert',
       example: '===',
+      readOnly: true,
       required: true
     }
   },
