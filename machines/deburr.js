@@ -4,10 +4,10 @@ module.exports = {
   friendlyName: 'Deburr a string',
 
 
-  description: 'Convert "latin-1 supplementary characters" to basic letters and remove combining diacritical marks.',
+  description: 'Replace special alphabetical characters such as umlauts and accents with their basic, boring equivalents.',
 
 
-  extendedDescription: '',
+  extendedDescription: 'Technically, this converts "latin-1 supplementary characters" to basic letters and removes combining diacritical marks.',
 
 
   sync: true,
@@ -20,8 +20,8 @@ module.exports = {
 
     string: {
       friendlyName: 'String',
-      example: 'déjà vu',
       description: 'The string to clean up.',
+      example: 'déjà vu, Günther. Just more of your saß.',
       required: true
     }
 
@@ -31,8 +31,7 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'OK.',
-      example: 'deja vu',
+      example: 'deja vu, Gunther. Just more of your sass.',
     }
 
   },

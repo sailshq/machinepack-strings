@@ -4,7 +4,10 @@ module.exports = {
   friendlyName: 'To stream',
 
 
-  description: 'Convert a string into readable stream.',
+  description: 'Convert a string into a readable stream of data.',
+
+
+  extendedDescription: 'The stream that is returned is a modern (streams2) Node Readable instance. In other words it is _paused_ until it is used.',
 
 
   moreInfoUrl: 'http://stackoverflow.com/a/22085851/486547',
@@ -28,11 +31,12 @@ module.exports = {
   exits: {
 
     success: {
-      variableName: 'Readable stream',
-      outputDescription: 'A stream of data from the source file.',
+      outputFriendlyName: 'Stream',
+      outputDescription: 'A Readable stream representing a string.',
       extendedDescription:
       'Note that this result stream is _not flowing_.  In other words, it is _paused_, which means '+
-      'you don\'t have to worry about using it immediately (i.e. before even one tick of the event loop elapses).',
+      'you don\'t have to worry about using it immediately (i.e. don\'t worry about a tick of the event loop elapsing). '+
+      'Also keep in mind that the stream returned is a modern (streams2) Node Readable instance.',
       example: '==='
     },
 

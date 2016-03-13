@@ -7,9 +7,6 @@ module.exports = {
   description: 'Determine the length of a string (i.e. count the number of characters)',
 
 
-  extendedDescription: '',
-
-
   sync: true,
 
 
@@ -28,18 +25,12 @@ module.exports = {
 
 
   exits: {
+
     success: {
-      friendlyName: 'then',
-      description: 'OK.',
       example: 15,
-    },
-    error: {
-      description: 'Unexpected error occurred.'
     }
+
   },
-
-
-  defaultExit: 'success',
 
 
   fn: function (inputs, exits) {

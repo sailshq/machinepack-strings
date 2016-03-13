@@ -17,45 +17,30 @@ module.exports = {
 
 
   inputs: {
+
     string: {
       friendlyName: 'String',
       example: 'foo-bar-baz',
       description: 'The string to convert (dash-delimited or otherwise)',
       required: true
     }
+
   },
 
 
   exits: {
+
     success: {
-      description: 'OK.',
       example: 'fooBarBaz',
-    },
-    error: {
-      description: 'Unexpected error occurred.'
     }
+
   },
 
 
-  defaultExit: 'success',
-
-
   fn: function (inputs, exits) {
-
     var _ = require('lodash');
+
     return exits.success(_.camelCase(inputs.string));
-
-    // var parts = inputs.string.split(/[\W_]/);
-    // var transformedParts = [];
-    // parts.forEach(function(part, index) {
-    //   part = part.toLowerCase();
-    //   if (index !== 0) {
-    //     part = part[0].toUpperCase()+part.substr(1);
-    //   }
-    //   transformedParts.push(part);
-    // });
-    // return exits.success(transformedParts.join(''));
-
   }
 
 };

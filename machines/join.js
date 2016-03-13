@@ -33,7 +33,7 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'Returns the concatenated result.',
+      outputDescription: 'The concatenated result string.',
       example: 'foo'
     }
 

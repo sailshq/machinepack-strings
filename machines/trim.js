@@ -7,9 +7,6 @@ module.exports = {
   description: 'Trim trailing and leading whitespace from a string.',
 
 
-  extendedDescription: '',
-
-
   inputs: {
 
     string: {
@@ -22,17 +19,9 @@ module.exports = {
   },
 
 
-  defaultExit: 'success',
-
-
   exits: {
 
-    error: {
-      description: 'Unexpected error occurred.',
-    },
-
     success: {
-      description: 'Done.',
       example: 'I went to the store to get some more milk.'
     },
 

@@ -53,24 +53,16 @@ module.exports = {
   exits: {
 
     success: {
-      friendlyName: 'then',
-      description: 'Returns the modified string.',
+      outputDescription: 'The modified string.',
       example: 'Hello Mumbai!'
     },
 
     invalidRegexp: {
       friendlyName: 'invalid regexp',
       description: 'Provided regular expression is invalid (cannot be instantiated into a RegExp object)'
-    },
-
-    error: {
-      description: 'Unexpected error occurred.'
     }
 
   },
-
-
-  defaultExit: 'success',
 
 
   fn: function (inputs, exits) {

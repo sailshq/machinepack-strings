@@ -19,9 +19,9 @@ module.exports = {
   inputs: {
 
     templateStr: {
-      friendlyName: 'Template string',
+      friendlyName: 'Template',
       description: 'The string to use as a template.',
-      example: 'Hi there, Miss <%= me.name %>!',
+      example: 'Hi there, Miss <%= me.lastName %>!',
       required: true
     },
 
@@ -31,6 +31,9 @@ module.exports = {
       extendedDescription: 'Each key will be a variable accessible in the template.  For instance, if you supply an array `[{name:"Chandra"}, {name:"Mary"}]` as the key "friends", then you will be able to access `friends` from the template; i.e. `<ul><% _.each(friends, function (friend){ %><li><%= friend.name %></li> <%}); %></ul>`  Use `<%= %>` to inject the contents of a variable as-is, `<%- %>` to HTML-escape them first, or `<% %>` to execute some JavaScript code.',
       example: {},
       // e.g. {
+      //   me: {
+      //     lastName: 'Piggy'
+      //   },
       //   email: {
       //     from: 'mikermcneil@sailsjs.org',
       //     subject: 'hello world!'
@@ -47,17 +50,18 @@ module.exports = {
   exits: {
 
     success: {
-      variableName: 'rendered',
-      description: 'Returns the rendered result string.'
+      outputFriendlyName: 'Rendered',
+      outputDescription: 'The rendered result string from the template.',
+      example: 'Hi there, Miss Piggy!'
     },
 
     missingData: {
       friendlyName: 'missing data',
       description: 'One or more variables used in the template were not provided in the template data.',
-      variableName: 'info',
+      outputFriendlyName: 'Info',
       example: {
         message: 'Some variables (`me`,`friends`) were used in template "/code/machine/docs/.type-table.tpl", but not provided in the template data dictionary.',
-        missingVariables: ['me', 'friends']
+        missingVariables: ['me']
       }
     },
 

@@ -46,7 +46,7 @@ module.exports = {
 
     success: {
       friendlyName: 'match found',
-      description: 'Returns the matched substring.',
+      outputDescription: 'The matched substring.',
       example: {
         found: 'world',
         at: 6
@@ -61,16 +61,9 @@ module.exports = {
     notFound: {
       friendlyName: 'no match found',
       description: 'No match found.'
-    },
-
-    error: {
-      description: 'Unexpected error occurred.'
     }
 
   },
-
-
-  defaultExit: 'success',
 
 
   fn: function (inputs, exits) {

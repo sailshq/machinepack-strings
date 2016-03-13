@@ -45,24 +45,16 @@ module.exports = {
   exits: {
 
     success: {
-      friendlyName: 'then',
-      description: 'Returns an array of substrings.',
+      outputDescription: 'An array of substrings.',
       example: ['Hello']
     },
 
     invalidRegexp: {
       friendlyName: 'invalid regexp',
       description: 'Provided regular expression is invalid (cannot be instantiated into a RegExp object)'
-    },
-
-    error: {
-      description: 'Unexpected error occurred.'
     }
 
   },
-
-
-  defaultExit: 'success',
 
 
   fn: function (inputs, exits) {

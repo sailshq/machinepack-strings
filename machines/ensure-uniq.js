@@ -42,9 +42,8 @@ module.exports = {
   exits: {
 
     success: {
-      variableName: 'uniqueStr',
-      example: 'Siri2',
-      description: 'Done.',
+      outputFriendlyName: 'Unique',
+      example: 'Siri2'
     },
 
   },

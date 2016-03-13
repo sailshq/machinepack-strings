@@ -13,9 +13,6 @@ module.exports = {
   sync: true,
 
 
-  idempotent: true,
-
-
   inputs: {
 
     string: {
@@ -47,8 +44,8 @@ module.exports = {
   exits: {
 
     success: {
-      variableName: 'result',
-      description: 'Returns the desired slice of the string.',
+      outputFriendlyName: 'Slice',
+      outputDescription: 'The desired slice of the string.',
       example: 'Gee'
     },
 

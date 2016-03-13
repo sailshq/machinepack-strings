@@ -17,30 +17,28 @@ module.exports = {
 
 
   inputs: {
+
     string: {
       example: 'Some stuff and THINGS 235823523',
       description: 'The string to lowercase.',
       required: true
     }
+
   },
 
 
   exits: {
+
     success: {
-      description: 'OK.',
       example: 'some stuff and things 235823523',
-    },
-    error: {
-      description: 'Unexpected error occurred.'
     }
+
   },
-
-
-  defaultExit: 'success',
 
 
   fn: function (inputs, exits) {
     return exits.success(inputs.string.toLowerCase());
   }
+
 
 };

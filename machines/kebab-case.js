@@ -7,9 +7,6 @@ module.exports = {
   description: 'Build a new kebab-cased version of the specified string.',
 
 
-  extendedDescription: 'Returns the kebab-cased (i.e. dash-delimited) string, lower-cased, with underscores and spaces removed.',
-
-
   sync: true,
 
 
@@ -17,27 +14,25 @@ module.exports = {
 
 
   inputs: {
+
     string: {
       friendlyName: 'String',
       example: 'fooBar_baz bong___',
       description: 'The string to convert.',
       required: true
     }
+
   },
 
 
   exits: {
+
     success: {
-      description: 'OK.',
+      outputDescription: 'The kebab-cased (i.e. dash-delimited) string, lower-cased, with underscores and spaces removed.',
       example: 'foo-bar-baz-bong',
-    },
-    error: {
-      description: 'Unexpected error occurred.'
     }
+
   },
-
-
-  defaultExit: 'success',
 
 
   fn: function (inputs, exits) {
