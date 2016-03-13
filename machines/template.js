@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Template (<%= %>)',
+  friendlyName: 'Template',
 
 
   description: 'Render some data into a template string.',
@@ -27,9 +27,9 @@ module.exports = {
 
     data: {
       friendlyName: 'Template data',
-      description: 'The data which will be accessible from the template',
+      description: 'A dictionary of data which will be accessible from the template.',
       extendedDescription: 'Each key will be a variable accessible in the template.  For instance, if you supply an array `[{name:"Chandra"}, {name:"Mary"}]` as the key "friends", then you will be able to access `friends` from the template; i.e. `<ul><% _.each(friends, function (friend){ %><li><%= friend.name %></li> <%}); %></ul>`  Use `<%= %>` to inject the contents of a variable as-is, `<%- %>` to HTML-escape them first, or `<% %>` to execute some JavaScript code.',
-      example: {}
+      example: {},
       // e.g. {
       //   email: {
       //     from: 'mikermcneil@sailsjs.org',
@@ -37,6 +37,8 @@ module.exports = {
       //   },
       //   projectName: 'Bikrosoft (Confidential)'
       // }
+      defaultsTo: {},
+      readOnly: true
     }
 
   },
@@ -71,6 +73,13 @@ module.exports = {
     var util = require('util');
     var _ = require('lodash');
 
+    // Build template function outside of our loop below.
+    var templateFn = _.template(inputs.templateStr, {
+      imports: {
+        util: util,
+        _: _
+      }
+    });
 
     // Now attempt to render the Lodash template.
     // Templates are provided access to the Node.js `util` library,
@@ -85,7 +94,6 @@ module.exports = {
     var numIterations = 0;
     var MAX_NUM_ITERATIONS = 10;
     var dataWithFakeValues = _.cloneDeep(inputs.data||{});
-
     while (numIterations < MAX_NUM_ITERATIONS && morePotentiallyActionableErrorsExist) {
 
       // Track iterations to prevent this loop from spinning out of control.
@@ -93,12 +101,7 @@ module.exports = {
 
       try {
         // Attempt to render template and data into a single string using Lodash
-        result = _.template(inputs.templateStr, {
-          imports: {
-            util: util,
-            _: _
-          }
-        })(dataWithFakeValues);
+        result = templateFn(dataWithFakeValues);
 
         // If we made it here, there were no errors rendering the template.
         morePotentiallyActionableErrorsExist = false;
