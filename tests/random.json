@@ -1,5 +1,5 @@
 {
-  "machine": "unique",
+  "machine": "random",
   "expectations": [
     {
       "using": {},

@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Combine strings',
+  friendlyName: 'Join',
 
 
-  description: 'Join an array of strings into one new string.',
+  description: 'Combine an array of strings into one new string.',
 
 
   sync: true,
@@ -16,13 +16,13 @@ module.exports = {
   inputs: {
 
     strings: {
-      description: 'The array of strings to join',
+      description: 'The array of strings to join.',
       example: ['foo'],
       required: true
     },
 
     separator: {
-      description: 'The separator to insert between each string (by default, empty string)',
+      description: 'The optional separator to insert between each string.',
       defaultsTo: '',
       example: ','
     }

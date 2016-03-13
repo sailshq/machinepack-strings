@@ -30,16 +30,12 @@
     "friendlyName": "Strings",
     "machineDir": "machines/",
     "machines": [
-      "camel-case",
       "match",
       "construct",
-      "lower-case",
-      "upper-case",
       "capitalize",
       "length",
       "trunc",
       "trim",
-      "kebab-case",
       "replace",
       "split",
       "deburr",
@@ -47,9 +43,13 @@
       "at",
       "join",
       "template",
-      "unique",
       "ensure-uniq",
-      "to-stream"
+      "to-stream",
+      "random",
+      "to-lower-case",
+      "to-upper-case",
+      "to-kebab-case",
+      "to-camel-case"
     ],
     "testsUrl": "https://travis-ci.org/"
   },

@@ -1,5 +1,5 @@
 {
-  "machine": "camel-case",
+  "machine": "to-camel-case",
   "expectations": [
     {
       "using": {

@@ -1,5 +1,5 @@
 {
-  "machine": "lower-case",
+  "machine": "to-lower-case",
   "expectations": [
     {
       "using": {

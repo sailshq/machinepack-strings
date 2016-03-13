@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Convert string to kebab-case',
+  friendlyName: 'To kebab-case',
 
 
-  description: 'Build a new kebab-cased version of the specified string.',
+  description: 'Convert a string to kebab-case (dashes instead of spaces/underscores/varying capitalization).',
 
 
   sync: true,

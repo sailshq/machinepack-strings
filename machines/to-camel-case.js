@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Convert string to camel-case',
+  friendlyName: 'To camel-case',
 
 
-  description: 'Build a new camel-cased version of the specified string.',
+  description: 'Convert a string to camel-case (varying capitalization instead of spaces/underscores/dashes).',
 
 
   extendedDescription: 'Returns a version of the string with dashes removed, using medial capitalization to separate words instead. See http://en.wikipedia.org/wiki/CamelCase for more information.',

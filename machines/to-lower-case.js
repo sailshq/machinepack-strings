@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Lowercase a string',
+  friendlyName: 'To lowercase',
 
 
   description: 'Convert all uppercase letters to lowercase in the specified string.',

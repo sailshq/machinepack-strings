@@ -1,5 +1,5 @@
 {
-  "machine": "kebab-case",
+  "machine": "to-kebab-case",
   "expectations": [
     {
       "using": {

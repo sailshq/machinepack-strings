@@ -1,5 +1,5 @@
 {
-  "machine": "upper-case",
+  "machine": "to-upper-case",
   "expectations": [
     {
       "using": {
