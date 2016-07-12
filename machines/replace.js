@@ -45,7 +45,27 @@ module.exports = {
       example: true,
       advanced: true,
       defaultsTo: true
+    },
+
+    global: {
+      friendlyName: 'Replace all?',
+      description: 'Whether or not to replace all substrings that match the regular expression, or just the first.',
+      extendedDescription: 'This will build the regular expression using the `/g` modifier.',
+      example: true,
+      advanced: true,
+      defaultsTo: false
+    },
+
+    multiline: {
+      friendlyName: 'Multiline?',
+      description: 'Whether to treat beginning and end characters (^ and $) as matching each line delimited by \\n or \\r.',
+      extendedDescription: 'This will build the regular expression using the `/m` modifier.',
+      example: true,
+      advanced: true,
+      defaultsTo: false
     }
+
+
 
   },
 
@@ -91,8 +111,18 @@ module.exports = {
 
       // Then construct it
       // (and if relevant, enable case-insensitivity)
+      var modifiers = '';
       if (inputs.caseInsensitive) {
-        regexp = new RegExp(regexp, 'i');
+        modifiers += 'i';
+      }
+      if (inputs.global) {
+        modifiers += 'g';
+      }
+      if (inputs.multiline) {
+        modifiers += 'm';
+      }
+      if (modifiers.length) {
+        regexp = new RegExp(regexp, modifiers);
       }
       else {
         regexp = new RegExp(regexp);
