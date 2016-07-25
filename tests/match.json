@@ -16,7 +16,7 @@
       "outcome": "success",
       "returns": {
         "found": "Three",
-        "at": "0"
+        "at": 0
       }
     },
     {
@@ -28,7 +28,7 @@
       "outcome": "success",
       "returns": {
         "found": "three",
-        "at": "18"
+        "at": 18
       }
     },
     {
@@ -40,7 +40,7 @@
       "outcome": "success",
       "returns": {
         "found": "Three",
-        "at": "0"
+        "at": 0
       }
     },
     {
@@ -51,7 +51,7 @@
       "outcome": "success",
       "returns": {
         "found": "run?yeah",
-        "at": "50"
+        "at": 50
       }
     },
     {
@@ -62,7 +62,7 @@
       "outcome": "success",
       "returns": {
         "found": "mice.",
-        "at": "30"
+        "at": 30
       }
     },
     {
@@ -73,7 +73,7 @@
       "outcome": "success",
       "returns": {
         "found": "mice",
-        "at": "12"
+        "at": 12
       }
     }
   ]
