@@ -36,13 +36,12 @@
       "outcome": "success",
       "returns": "fooBar2345Baz"
     },
-// This test fails because of an issue with test-machinepack-mocha, I think
-//    {
-//      "using": {
-//        "string": "235723857239587235"
-//      },
-//      "outcome": "success",
-//      "returns": "235723857239587235"
-//    }
+    {
+     "using": {
+       "string": "235723857239587235"
+     },
+     "outcome": "success",
+     "returns": "235723857239587235"
+   }
   ]
 }

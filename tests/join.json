@@ -18,17 +18,16 @@
       "outcome": "success",
       "returns": ""
     },
-// This test fails because of an issue with test-machinepack-mocha, I think
-//    {
-//      "using": {
-//        "strings": [
-//          3,
-//          4
-//        ]
-//      },
-//      "outcome": "success",
-//      "returns": "4"
-//    },
+    {
+      "using": {
+        "strings": [
+          3,
+          4
+       ]
+      },
+      "outcome": "success",
+      "returns": "34"
+    },
     {
       "using": {
         "strings": [
