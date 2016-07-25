@@ -7,7 +7,7 @@ module.exports = {
   description: 'Get a substring of consecutive characters from the string.',
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   sync: true,
@@ -16,7 +16,6 @@ module.exports = {
   inputs: {
 
     string: {
-      friendlyName: 'String',
       description: 'The string to slice.',
       example: 'McGee',
       required: true
@@ -35,7 +34,6 @@ module.exports = {
       description: 'The index of the last item to include in the new substring.',
       extendedDescription: 'This index should be zero or a positive number. Omitting this input value will include the rest of the string.',
       example: 5,
-      min: 0
     }
 
   },
@@ -44,9 +42,9 @@ module.exports = {
   exits: {
 
     success: {
-      outputFriendlyName: 'Slice',
-      outputDescription: 'The desired slice of the string.',
-      example: 'Gee'
+      outputFriendlyName: 'Sliced substring',
+      outputDescription: 'The desired slice of the input string.',
+      outputExample: 'Gee'
     },
 
   },

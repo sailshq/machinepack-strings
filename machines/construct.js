@@ -13,13 +13,13 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     value: {
-      description: 'The value to convert',
+      description: 'The value to convert.',
       example: '===',
       readOnly: true,
       required: true
@@ -31,9 +31,9 @@ module.exports = {
   exits: {
 
     success: {
-      outputFriendlyName: 'String',
+      outputFriendlyName: 'New string',
       outputDescription: 'A string constructed from the provided value.',
-      example: 'some string'
+      outputExample: 'some string'
     }
 
   },

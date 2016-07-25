@@ -4,13 +4,13 @@ module.exports = {
   friendlyName: 'Length',
 
 
-  description: 'Determine the length of a string (i.e. count the number of characters)',
+  description: 'Determine the length of a string (i.e. count the number of characters).',
 
 
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
@@ -27,7 +27,9 @@ module.exports = {
   exits: {
 
     success: {
-      example: 15,
+      outputFriendlyName: 'String length',
+      outputDescription: 'The length of the specified string.',
+      outputExample: 15,
     }
 
   },

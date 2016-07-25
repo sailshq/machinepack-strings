@@ -13,13 +13,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     string: {
-      friendlyName: 'String',
       description: 'The string to clean up.',
       example: 'déjà vu, Günther. Just more of your saß.',
       required: true
@@ -31,7 +30,9 @@ module.exports = {
   exits: {
 
     success: {
-      example: 'deja vu, Gunther. Just more of your sass.',
+      outputFriendlyName: 'Deburred string',
+      outputExample: 'deja vu, Gunther. Just more of your sass.',
+      outputDescription: 'The input string with special characters removed.'
     }
 
   },

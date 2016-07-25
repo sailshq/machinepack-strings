@@ -10,7 +10,6 @@ module.exports = {
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: '   I went to the store to get some more milk.     ',
       description: 'The string to trim.',
       required: true
@@ -22,7 +21,9 @@ module.exports = {
   exits: {
 
     success: {
-      example: 'I went to the store to get some more milk.'
+      outputFriendlyName: 'Trimmed string',
+      outputDescription: 'The trimmed version of the input string, with whitespace removed from both sides.',
+      outputExample: 'I went to the store to get some more milk.'
     },
 
   },

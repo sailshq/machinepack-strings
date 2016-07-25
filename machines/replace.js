@@ -10,13 +10,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'Hello world!',
       description: 'The string to modify.',
       required: true
@@ -25,13 +24,12 @@ module.exports = {
     regexp: {
       friendlyName: 'Regular expression',
       example: 'World',
-      description: 'The regular expression to match against (i.e. "metal detector")',
+      description: 'The regular expression to match against (i.e. "metal detector").',
       extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
       required: true
     },
 
     replacement: {
-      friendlyName: 'Replacement',
       description: 'The string to use when replacing matches.',
       extendedDescription: 'Note that you can use match expressions (e.g. "$1", "$2", etc.) to express the values of capture groups.',
       example: 'Mumbai',
@@ -43,7 +41,6 @@ module.exports = {
       description: 'Whether or not you care about uppercase/lowercase letters.',
       extendedDescription: 'This will build the regular expression using the `/i` modifier.',
       example: true,
-      advanced: true,
       defaultsTo: true
     },
 
@@ -52,7 +49,6 @@ module.exports = {
       description: 'Whether or not to replace all substrings that match the regular expression, or just the first.',
       extendedDescription: 'This will build the regular expression using the `/g` modifier.',
       example: true,
-      advanced: true,
       defaultsTo: false
     },
 
@@ -61,7 +57,6 @@ module.exports = {
       description: 'Whether to treat beginning and end characters (^ and $) as matching each line delimited by \\n or \\r.',
       extendedDescription: 'This will build the regular expression using the `/m` modifier.',
       example: true,
-      advanced: true,
       defaultsTo: false
     }
 
@@ -73,13 +68,14 @@ module.exports = {
   exits: {
 
     success: {
-      outputDescription: 'The modified string.',
-      example: 'Hello Mumbai!'
+      outputFriendlyName: 'Replaced string',
+      outputDescription: 'The transformed input string, after applying the specified replacement.',
+      outputExample: 'Hello Mumbai!'
     },
 
     invalidRegexp: {
-      friendlyName: 'invalid regexp',
-      description: 'Provided regular expression is invalid (cannot be instantiated into a RegExp object)'
+      friendlyName: 'Invalid regular expression',
+      description: 'The provided regular expression was invalid (could not be instantiated into a RegExp object).'
     }
 
   },

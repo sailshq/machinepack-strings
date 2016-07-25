@@ -13,13 +13,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'villeriño',
       description: 'The string to capitalize.',
       required: true
@@ -27,7 +26,7 @@ module.exports = {
 
     at: {
       friendlyName: 'Which letter?',
-      description: 'The index of the letter to capitalize within the string',
+      description: 'The index of the letter to capitalize within the string.',
       extendedDescription: 'Strings are indexed starting from the left at 0.',
       example: 0,
       defaultsTo: 0
@@ -39,9 +38,9 @@ module.exports = {
   exits: {
 
     success: {
-      friendlyName: 'then',
-      description: 'OK.',
-      example: 'Villeriño',
+      outputFriendlyName: 'Capitalized string',
+      outputExample: 'Villeriño',
+      outputDescription: 'The input string with the specified character capitalized.'
     }
 
   },

@@ -13,7 +13,7 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
@@ -30,7 +30,9 @@ module.exports = {
   exits: {
 
     success: {
-      example: 'SOME STUFF AND THINGS 235823523',
+      outputFriendlyName: 'Upper-cased string',
+      outputDescription: 'The upper-cased version of the input string.',
+      outputExample: 'SOME STUFF AND THINGS 235823523',
     }
 
   },

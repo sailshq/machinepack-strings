@@ -18,9 +18,9 @@ module.exports = {
   exits: {
 
     success: {
-      outputFriendlyName: 'Random',
-      outputDescription: 'Random alphanumeric string, consisting only of numerals [0-9] and lowercase letters [a-z].',
-      example: '1a17d9af25aef464b46481d901ba2005'
+      outputFriendlyName: 'Random string',
+      outputDescription: 'A random alphanumeric string, consisting only of numerals [0-9] and lowercase letters [a-z].',
+      outputExample: '1a17d9af25aef464b46481d901ba2005'
     }
 
   },

@@ -10,13 +10,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'fooBar_baz bong___',
       description: 'The string to convert.',
       required: true
@@ -28,8 +27,9 @@ module.exports = {
   exits: {
 
     success: {
+      outputFriendlyName: 'Kebab-cased string',
       outputDescription: 'The kebab-cased (i.e. dash-delimited) string, lower-cased, with underscores and spaces removed.',
-      example: 'foo-bar-baz-bong',
+      outputExample: 'foo-bar-baz-bong',
     }
 
   },

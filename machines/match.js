@@ -10,7 +10,7 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
@@ -18,14 +18,14 @@ module.exports = {
     string: {
       friendlyName: 'String to search',
       example: 'hello world',
-      description: 'The string to search (i.e. "haystack")',
+      description: 'The string to search (i.e. "haystack").',
       required: true
     },
 
     regexp: {
       friendlyName: 'Regular expression',
       example: 'world',
-      description: 'The regular expression to match against (i.e. "metal detector")',
+      description: 'The regular expression to match against (i.e. "metal detector").',
       extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
       required: true
     },
@@ -35,7 +35,6 @@ module.exports = {
       description: 'Whether or not you care about uppercase/lowercase letters.',
       extendedDescription: 'This will build the regular expression using the `/i` modifier.',
       example: true,
-      advanced: true,
       defaultsTo: true
     }
 
@@ -45,22 +44,22 @@ module.exports = {
   exits: {
 
     success: {
-      friendlyName: 'match found',
-      outputDescription: 'The matched substring.',
-      example: {
+      outputFriendlyName: 'Matched substring info',
+      outputDescription: 'Information about the matched substring, including its text and position.',
+      outputExample: {
         found: 'world',
         at: 6
       }
     },
 
     invalidRegexp: {
-      friendlyName: 'invalid regexp',
-      description: 'Provided regular expression is invalid (cannot be instantiated into a RegExp object)'
+      friendlyName: 'Invalid regular expression',
+      description: 'The provided regular expression was invalid (cannot be instantiated into a RegExp object).'
     },
 
     notFound: {
-      friendlyName: 'no match found',
-      description: 'No match found.'
+      friendlyName: 'No match found',
+      description: 'No match was found.'
     }
 
   },

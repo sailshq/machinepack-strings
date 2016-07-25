@@ -10,13 +10,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'Hello world!',
       description: 'The string to split.',
       required: true
@@ -35,7 +34,6 @@ module.exports = {
       description: 'Whether or not you care about uppercase/lowercase letters.',
       extendedDescription: 'This will build the regular expression using the `/i` modifier.',
       example: true,
-      advanced: true,
       defaultsTo: true
     }
 
@@ -45,13 +43,14 @@ module.exports = {
   exits: {
 
     success: {
+      outputFriendlyName: 'Split-up string',
       outputDescription: 'An array of substrings.',
-      example: ['Hello']
+      outputExample: ['Hello']
     },
 
     invalidRegexp: {
-      friendlyName: 'invalid regexp',
-      description: 'Provided regular expression is invalid (cannot be instantiated into a RegExp object)'
+      friendlyName: 'Invalid regular expression',
+      description: 'The provided regular expression was invalid (could not be instantiated into a RegExp object).'
     }
 
   },

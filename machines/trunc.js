@@ -13,14 +13,12 @@ module.exports = {
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'Christian van der Henst',
       description: 'The string to truncate.',
       required: true
     },
 
     maxLength: {
-      friendlyName: 'Max length',
       description: 'The maximum number of characters (including the "...")',
       example: 15,
       defaultsTo: 30
@@ -46,13 +44,10 @@ module.exports = {
 
   exits: {
 
-    error: {
-      description: 'Unexpected error occurred.',
-    },
-
     success: {
-      description: 'Done.',
-      example: 'Christian van...'
+      outputFriendlyName: 'Truncated string',
+      outputDescription: 'The input string, truncated to the specified length.',
+      outputExample: 'Christian van...'
     },
 
   },

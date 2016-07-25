@@ -10,7 +10,7 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
@@ -33,8 +33,9 @@ module.exports = {
   exits: {
 
     success: {
+      outputFriendlyName: 'Joined string',
       outputDescription: 'The concatenated result string.',
-      example: 'foo'
+      outputExample: 'foo'
     }
 
   },

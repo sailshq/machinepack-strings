@@ -19,7 +19,6 @@ module.exports = {
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'foo bar baz',
       description: 'The string to convert.',
       required: true
@@ -37,7 +36,7 @@ module.exports = {
       'Note that this result stream is _not flowing_.  In other words, it is _paused_, which means '+
       'you don\'t have to worry about using it immediately (i.e. don\'t worry about a tick of the event loop elapsing). '+
       'Also keep in mind that the stream returned is a modern (streams2) Node Readable instance.',
-      example: '==='
+      outputExample: '==='
     },
 
   },

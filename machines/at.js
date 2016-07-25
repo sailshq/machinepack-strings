@@ -10,13 +10,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'villeriño',
       description: 'The source string.',
       required: true
@@ -24,7 +23,7 @@ module.exports = {
 
     at: {
       friendlyName: 'At...',
-      description: 'The index to look up within the string',
+      description: 'The index to look up within the string.',
       extendedDescription: 'Strings are indexed starting from the left at 0.',
       example: 7,
       required: true
@@ -35,15 +34,16 @@ module.exports = {
 
   exits: {
 
-    notFound: {
-      description: 'The string doesn\'t have a character at the specified index (i.e. it\'s too short)'
+    success: {
+      outputFriendlyName: 'Character from string',
+      outputExample: 'ñ',
+      outputDescription: 'The character found at the specified index of the input string.'
     },
 
-    success: {
-      friendlyName: 'then',
-      description: 'OK.',
-      example: 'ñ',
-    }
+    notFound: {
+      description: 'The string doesn\'t have a character at the specified index (i.e. it\'s too short).'
+    },
+
 
   },
 

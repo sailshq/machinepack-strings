@@ -7,7 +7,7 @@ module.exports = {
   description: 'Make a unique, but still human-readable, version of a string vs. a set of existing strings by adding a number to the end.',
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   sync: true,
@@ -23,7 +23,6 @@ module.exports = {
     },
 
     existingStrings: {
-      friendlyName: 'Existing strings',
       description: 'The set of existing strings to check uniqueness against.',
       example: ['Siri'],
       required: true
@@ -31,7 +30,7 @@ module.exports = {
 
     caseSensitive: {
       friendlyName: 'Case sensitive?',
-      description: 'Whether or not the uniqueness check should be case-sensitive (care about uppercase vs. lowercase letters)',
+      description: 'Whether or not the uniqueness check should be case-sensitive (care about uppercase vs. lowercase letters).',
       example: false,
       defaultsTo: false
     }
@@ -42,8 +41,9 @@ module.exports = {
   exits: {
 
     success: {
-      outputFriendlyName: 'Unique',
-      example: 'Siri2'
+      outputFriendlyName: 'Unique string',
+      outputDescription: 'A version of the input string guaranteed to be unique among the specified `existingStrings`.',
+      outputExample: 'Siri2'
     },
 
   },

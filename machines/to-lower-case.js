@@ -13,7 +13,7 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
@@ -30,7 +30,9 @@ module.exports = {
   exits: {
 
     success: {
-      example: 'some stuff and things 235823523',
+      outputFriendlyName: 'Lower-cased string',
+      outputDescription: 'The lower-cased version of the input string.',
+      outputExample: 'some stuff and things 235823523',
     }
 
   },

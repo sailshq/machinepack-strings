@@ -13,15 +13,14 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     string: {
-      friendlyName: 'String',
       example: 'foo-bar-baz',
-      description: 'The string to convert (dash-delimited or otherwise)',
+      description: 'The string to convert (dash-delimited or otherwise).',
       required: true
     }
 
@@ -31,7 +30,9 @@ module.exports = {
   exits: {
 
     success: {
-      example: 'fooBarBaz',
+      outputFriendlyName: 'Camel-cased string',
+      outputDescription: 'The camel-cased version of the input string.',
+      outputExample: 'fooBarBaz',
     }
 
   },

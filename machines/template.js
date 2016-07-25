@@ -10,7 +10,7 @@ module.exports = {
   extendedDescription: 'Uses Lodash template syntax (e.g. `<%= %>`, `<%- %>`, `<% %>`)  Also provides access to the Node.js core utility module (as `util`), as well as Lodash itself (as `_`).',
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   sync: true,
@@ -50,16 +50,16 @@ module.exports = {
   exits: {
 
     success: {
-      outputFriendlyName: 'Rendered',
+      outputFriendlyName: 'Rendered string',
       outputDescription: 'The rendered result string from the template.',
-      example: 'Hi there, Miss Piggy!'
+      outputExample: 'Hi there, Miss Piggy!'
     },
 
     missingData: {
-      friendlyName: 'missing data',
       description: 'One or more variables used in the template were not provided in the template data.',
-      outputFriendlyName: 'Info',
-      example: {
+      outputFriendlyName: 'Missing template data',
+      outputDescription: 'Information about the data that was missing from the template.',
+      outputExample: {
         message: 'Some variables (`me`,`friends`) were used in template "/code/machine/docs/.type-table.tpl", but not provided in the template data dictionary.',
         missingVariables: ['me']
       }
