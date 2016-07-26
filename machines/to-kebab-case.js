@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'To kebab-case',
+  friendlyName: 'Kebab-case string',
 
 
   description: 'Convert a string to kebab-case (dashes instead of spaces/underscores/varying capitalization).',
@@ -36,7 +36,11 @@ module.exports = {
 
 
   fn: function (inputs, exits) {
+
+    // Import `lodash`.
     var _ = require('lodash');
+
+    // Return the kebab-cased version of the input string through the `success` exit.
     return exits.success(_.kebabCase(inputs.string));
   }
 

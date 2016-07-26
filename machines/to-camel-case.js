@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'To camel-case',
+  friendlyName: 'Camel-case string',
 
 
   description: 'Convert a string to camel-case (varying capitalization instead of spaces/underscores/dashes).',
@@ -39,8 +39,11 @@ module.exports = {
 
 
   fn: function (inputs, exits) {
+
+    // Import `lodash`.
     var _ = require('lodash');
 
+    // Return the camel-cased version of the input string through the `success` exit.
     return exits.success(_.camelCase(inputs.string));
   }
 

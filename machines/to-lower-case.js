@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'To lowercase',
+  friendlyName: 'Lowercase string',
 
 
   description: 'Convert all uppercase letters to lowercase in the specified string.',
@@ -39,7 +39,10 @@ module.exports = {
 
 
   fn: function (inputs, exits) {
+
+    // Return the lowercased version of the input string through the `success` exit.
     return exits.success(inputs.string.toLowerCase());
+
   }
 
 

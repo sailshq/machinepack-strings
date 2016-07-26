@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Ensure uniqueness',
+  friendlyName: 'Ensure string uniqueness',
 
 
   description: 'Make a unique, but still human-readable, version of a string vs. a set of existing strings by adding a number to the end.',
