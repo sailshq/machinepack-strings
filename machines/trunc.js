@@ -4,6 +4,9 @@ module.exports = {
   friendlyName: 'Truncate string',
 
 
+  sync: true,
+
+
   description: 'If the string is longer than the given maximum length, chop off characters from the end.',
 
 

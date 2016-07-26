@@ -4,6 +4,9 @@ module.exports = {
   friendlyName: 'Trim whitespace',
 
 
+  sync: true,
+
+
   description: 'Trim trailing and leading whitespace from a string.',
 
 
