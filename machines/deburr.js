@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Deburr a string',
+  friendlyName: 'Deburr string',
 
 
   description: 'Replace special alphabetical characters such as umlauts and accents with their basic, boring equivalents.',
@@ -32,15 +32,20 @@ module.exports = {
     success: {
       outputFriendlyName: 'Deburred string',
       outputExample: 'deja vu, Gunther. Just more of your sass.',
-      outputDescription: 'The input string with special characters removed.'
+      outputDescription: 'The input string with special characters replaced.'
     }
 
   },
 
 
   fn: function (inputs, exits) {
+
+    // Import `lodash`.
     var _ = require('lodash');
+
+    // Deburr the string and return through the `success` exit.
     return exits.success(_.deburr(inputs.string));
+
   }
 
 };
