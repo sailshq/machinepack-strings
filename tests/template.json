@@ -53,6 +53,18 @@
           "coercionTests"
         ]
       }
+    },
+    {
+      "using": {
+        "templateStr": "Hi there, Miss <%= _.capitalize(me.lastName) %>!",
+        "data": {
+          "me": {
+            "lastName": "piggy"
+          }
+        }
+      },
+      "outcome": "success",
+      "returns": "Hi there, Miss Piggy!"
     }
   ]
 }

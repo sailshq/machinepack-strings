@@ -1,13 +1,13 @@
 module.exports = {
 
 
-  friendlyName: 'Template',
+  friendlyName: 'Create string using template',
 
 
   description: 'Render some data into a template string.',
 
 
-  extendedDescription: 'Uses Lodash template syntax (e.g. `<%= %>`, `<%- %>`, `<% %>`)  Also provides access to the Node.js core utility module (as `util`), as well as Lodash itself (as `_`).',
+  extendedDescription: 'Uses Lodash template syntax (e.g. `<%= %>`, `<%- %>`, `<% %>`)  Also provides access to the Node.js core utility module (as `util`), as well as Lodash v3.10.1 (as `_`).',
 
 
   sideEffects: 'cacheable',
@@ -21,7 +21,7 @@ module.exports = {
     templateStr: {
       friendlyName: 'Template',
       description: 'The string to use as a template.',
-      example: 'Hi there, Miss <%= me.lastName %>!',
+      example: 'Hi there, Miss <%= _.capitalize(me.lastName) %>!',
       required: true
     },
 
@@ -32,7 +32,7 @@ module.exports = {
       example: {},
       // e.g. {
       //   me: {
-      //     lastName: 'Piggy'
+      //     lastName: 'piggy'
       //   },
       //   email: {
       //     from: 'mikermcneil@sailsjs.org',
@@ -74,6 +74,7 @@ module.exports = {
 
   fn: function (inputs, exits) {
 
+    // Import `util` and `lodash`.
     var util = require('util');
     var _ = require('lodash');
 
@@ -104,7 +105,7 @@ module.exports = {
       numIterations++;
 
       try {
-        // Attempt to render template and data into a single string using Lodash
+        // Attempt to render template and data into a single string using Lodash.
         result = templateFn(dataWithFakeValues);
 
         // If we made it here, there were no errors rendering the template.
@@ -112,10 +113,11 @@ module.exports = {
 
       }
       catch (e) {
-        // Recognize lodash template error (scope variable not defined)
+        // Recognize lodash template error (scope variable not defined).
         var isTplError = _.isObject(e) && (e.name === 'ReferenceError' || e.type === 'not_defined');
+
         // In Node v0.10.x, the error will have a handy arguments array.  In Node v0.12.0, we'll have to
-        // pull the missing var from the error message, where it'll be the first word
+        // pull the missing var from the error message, where it'll be the first word.
         var missingVar = (_.isArray(e.arguments) && e.arguments[0]) || (e.message.split(' ')[0]);
 
         // If this is not a recognizable missing variable error, or if
@@ -125,6 +127,7 @@ module.exports = {
           mostRecentTemplateErr = e;
           morePotentiallyActionableErrorsExist = false;
         }
+
         // Otherwise we can put a fake value in for the variable in
         // order to deduce other missing variables for more complete
         // error feedback.
@@ -148,6 +151,7 @@ module.exports = {
         missingVariables: missingVars
       });
     }
+
     // Otherwise if the only template error was some other unrecognized thing,
     // exit out of the `couldNotRender` exit.
     else if (mostRecentTemplateErr) {
@@ -155,7 +159,7 @@ module.exports = {
     }
 
     // If we made it here, everything w/ the _.template() call worked.
-    // Return the rendered result string.
+    // Return the rendered result string through the `success  exit.
     return exits.success(result);
 
   }
