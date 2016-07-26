@@ -40,7 +40,12 @@ module.exports = {
 
 
   fn: function(inputs, exits) {
+
+    // Since the machine runner automatically casts values to the expected output type,
+    // we just need to push the input value through the `success` exit to ensure that
+    // it will be a string.
     return exits.success(inputs.value);
+
   }
 
 
