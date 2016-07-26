@@ -44,6 +44,28 @@
       },
       "outcome": "success",
       "returns": "viLleriño"
+    },
+    {
+      "using": {
+        "string": "villeriño",
+        "at": 1.2
+      },
+      "outcome": "error"
+    },
+    {
+      "using": {
+        "string": "villeriño",
+        "at": -2
+      },
+      "outcome": "error"
+    },
+    {
+      "using": {
+        "string": "villeriño",
+        "at": 22
+      },
+      "outcome": "success",
+      "returns": "villeriño"
     }
   ]
 }
