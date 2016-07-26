@@ -51,20 +51,34 @@ module.exports = {
 
   fn: function (inputs,exits) {
 
+    // Import `lodash`.
     var _ = require('lodash');
 
+    // Make a copy of the input string.
     var potentiallyUniqueStr = inputs.string;
 
-    // The string is not unique until none of the other strings in the set have the same name.
-    while (_.any(inputs.existingStrings, function doesItMatch(existingStr) {
-      // Either case-sensitive or not.
-      if (inputs.caseSensitive) {
-        return existingStr === potentiallyUniqueStr;
-      }
-      return existingStr.toLowerCase() === potentiallyUniqueStr.toLowerCase();
-    }) ){
+    // Keep checking the current iteration of the string against all of the
+    // existing strings until we come up with something unique.
+    while (
 
-      // If the last part of the string is one or more numerals, we'll take a pass at incrementing
+      // Use _.any() to see if any of the strings in the `existingStrings` array
+      // match the current candidate string.
+      _.any(inputs.existingStrings, function doesItMatch(existingStr) {
+
+        // If we're doing a case-sensitive check, just see if the candidate string
+        // matches the existing string
+        if (inputs.caseSensitive) {
+          return existingStr === potentiallyUniqueStr;
+        }
+
+        // Otherwise check if the lower-cased versions of both strings match.
+        return existingStr.toLowerCase() === potentiallyUniqueStr.toLowerCase();
+
+    }) )
+
+    // If the candidate string did match an existing string, modify it in some way.
+    {
+      // If the last part of the candidate string is one or more numerals, we'll take a pass at incrementing
       // that existing number rather than just chaining more numbers onto the end.
       if (potentiallyUniqueStr.match(/[0-9]+$/g)) {
         potentiallyUniqueStr = potentiallyUniqueStr.replace(/[0-9]+$/, function(substr, index) {
@@ -77,9 +91,9 @@ module.exports = {
       }
     }
 
+    // Once we have our unique string, return it through the `success` exit.
     return exits.success(potentiallyUniqueStr);
   },
-
 
 
 };
