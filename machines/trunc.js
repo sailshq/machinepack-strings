@@ -54,18 +54,23 @@ module.exports = {
 
 
   fn: function (inputs,exits) {
+
+    // Import `lodash`.
     var _ = require('lodash');
 
+    // Set up options for the Lodash `_.trunc()` function.
     var opts = {
       length: inputs.maxLength,
       omission: inputs.omission
     };
+
+    // If requested, add a separator option to prevent words from being chopped.
     if (inputs.pretty){
       opts.separator = /[^0-9a-z]?\s+/i;
     }
 
-    var truncated = _.trunc(inputs.string, opts);
-    return exits.success(truncated);
+    // Truncate the string and return the result through the `success` exit.
+    return exits.success(_.trunc(inputs.string, opts));
   },
 
 
