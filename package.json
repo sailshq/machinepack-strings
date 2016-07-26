@@ -3,7 +3,7 @@
   "version": "5.1.0",
   "description": "Work with strings.",
   "scripts": {
-    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js && mocha tests/**"
   },
   "keywords": [
     "Strings",
