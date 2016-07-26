@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Character at...',
+  friendlyName: 'Get character at...',
 
 
   description: 'Get a character from a string at a particular position.',
