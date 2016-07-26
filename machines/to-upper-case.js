@@ -39,7 +39,10 @@ module.exports = {
 
 
   fn: function (inputs, exits) {
+
+    // Return the uppercased version of the input string through the `success` exit.
     return exits.success(inputs.string.toUpperCase());
+
   }
 
 

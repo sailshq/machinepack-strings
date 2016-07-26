@@ -30,10 +30,12 @@ module.exports = {
 
 
   fn: function (inputs,exits) {
+
+    // Import `lodash`.
     var _ = require('lodash');
 
-    var trimmed = _.trim(inputs.string);
-    return exits.success(trimmed);
+    // Trim the input string and return it through the `success` exit.
+    return exits.success(_.trim(inputs.string));
   },
 
 
