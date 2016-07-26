@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Length',
+  friendlyName: 'Get string length',
 
 
   description: 'Determine the length of a string (i.e. count the number of characters).',
@@ -36,6 +36,8 @@ module.exports = {
 
 
   fn: function (inputs, exits) {
+
+    // Return the input string's length through the `success` exit.
     return exits.success(inputs.string.length);
   }
 
