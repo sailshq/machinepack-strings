@@ -1,6 +1,6 @@
 module.exports = {
 
-  friendlyName: 'Random',
+  friendlyName: 'Generate random string',
 
 
   description: 'Generate a random, alphanumeric string which is probabalistically-unique.',
@@ -19,7 +19,7 @@ module.exports = {
 
     success: {
       outputFriendlyName: 'Random string',
-      outputDescription: 'A random alphanumeric string, consisting only of numerals [0-9] and lowercase letters [a-z].',
+      outputDescription: 'A random alphanumeric string, consisting only of numerals [0-9] and lowercase letters [a-f].',
       outputExample: '1a17d9af25aef464b46481d901ba2005'
     }
 
@@ -27,6 +27,8 @@ module.exports = {
 
 
   fn: function(inputs, exits) {
+
+    // Import `hat`.
     var Hat = require('hat');
 
     // Provide a pseudo-guarantee of uniqueness by using a process-global "rack" to store past tokens.
@@ -34,7 +36,7 @@ module.exports = {
     // the machine def. NEVER COUNT ON THESE TOKENS BEING ANYTHING MORE THAN "PROBABLY" UNIQUE!!)
     module.exports._rack = module.exports._rack || Hat.rack();
 
-    // Generate and return the new probably-unique token.
+    // Generate and return the new probably-unique token through the `success` exit.
     var token = module.exports._rack();
     return exits.success(token);
   }
