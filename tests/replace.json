@@ -66,6 +66,56 @@
       },
       "outcome": "success",
       "returns": "Hello City de Mexico!"
+    },
+    {
+      "using": {
+        "string": "Hello Mexico City!",
+        "regexp": "l",
+        "replacement": "1",
+        "global": true
+      },
+      "outcome": "success",
+      "returns": "He11o Mexico City!"
+    },
+    {
+      "using": {
+        "string": "You\nComplete\nMe",
+        "regexp": "^(\\w)",
+        "replacement": "($1)",
+        "global": true
+      },
+      "outcome": "success",
+      "returns": "(Y)ou\nComplete\nMe"
+    },
+    {
+      "using": {
+        "string": "You\nComplete\nMe",
+        "regexp": "^(C)",
+        "replacement": "($1)",
+        "multiline": true
+      },
+      "outcome": "success",
+      "returns": "You\n(C)omplete\nMe"
+    },
+    {
+      "using": {
+        "string": "You\nComplete\nMe",
+        "regexp": "^(C)",
+        "replacement": "($1)"
+      },
+      "outcome": "success",
+      "returns": "You\nComplete\nMe"
+    },
+    {
+      "using": {
+        "string": "You\nComplete\nMe",
+        "regexp": "^(\\w)",
+        "replacement": "($1)",
+        "global": true,
+        "multiline": true
+      },
+      "outcome": "success",
+      "returns": "(Y)ou\n(C)omplete\n(M)e"
     }
   ]
 }

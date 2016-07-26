@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Replace using regexp',
+  friendlyName: 'Replace substring using regex',
 
 
   description: 'Replace parts of a string that match a given regular expression with the specified replacement.',
@@ -83,52 +83,55 @@ module.exports = {
 
   fn: function (inputs, exits) {
 
+    // Import `lodash`.
     var _ = require('lodash');
 
-    // Case-insensitive by default
-    if (_.isUndefined(inputs.caseInsensitive)) {
-      inputs.caseInsensitive = true;
-    }
+    // Make a copy of the `regexp` input string.
+    var regexp = inputs.regexp;
 
-    // Check that the regexp is valid
-    var regexp;
+    // Attempt to instantiate `regexp` into a RegExp object.
     try {
 
-      regexp = inputs.regexp;
-
-      /////////////////////////////////////////////////////////
-      // Skip this-- we want users to be able to provide an actual
-      // regexp with all the things (i.e. should be able to use the
-      // star and dot and ? operators, etc)
-      /////////////////////////////////////////////////////////
-      // Then escape the provided string before instantiating
-      // regexp = _.escapeRegExp(regexp);
-      /////////////////////////////////////////////////////////
-
-      // Then construct it
-      // (and if relevant, enable case-insensitivity)
+      // Declare a string to hold the requested regex modifiers.
       var modifiers = '';
+
+      // Add an `i` modifier if case-insensitivity is requested.
       if (inputs.caseInsensitive) {
         modifiers += 'i';
       }
+
+      // Add a `g` modifier if global matching is requested.
       if (inputs.global) {
         modifiers += 'g';
       }
+
+      // Add an `m` modifier if multiline matching is requested.
       if (inputs.multiline) {
         modifiers += 'm';
       }
+
+      // If there are any modifiers, use them when attempting to
+      // create the regular expression.
       if (modifiers.length) {
         regexp = new RegExp(regexp, modifiers);
       }
+
+      // Otherwise attempt to create it without modifiers.
       else {
         regexp = new RegExp(regexp);
       }
-    } catch (e) {
+    }
+
+    // If we run into any trouble, trigger the `invalidRegexp` exit.
+    catch (e) {
       return exits.invalidRegexp(e);
     }
 
+    // Use the native String .replace() method to replace matches
+    // in the input string.
     var newString = inputs.string.replace(regexp, inputs.replacement);
 
+    // Return the resulting string through the `success` exit.
     return exits.success(newString);
 
   }
