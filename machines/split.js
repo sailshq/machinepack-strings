@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Split using regexp',
+  friendlyName: 'Split string into array',
 
 
   description: 'Split a string into an array of strings using a regular expression.',
@@ -25,7 +25,7 @@ module.exports = {
       friendlyName: 'Regular expression',
       example: '\\s',
       description: 'The regular expression for detecting delimiters which mark the end of each string segment.',
-      extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
+      extendedDescription: 'The regular expression should be specified as a string _without_ including leading or trailing slashes or modifiers like /gi.',
       required: true
     },
 
@@ -58,42 +58,33 @@ module.exports = {
 
   fn: function (inputs, exits) {
 
+    // Import `lodash`.
     var _ = require('lodash');
 
-    // Case-insensitive by default
-    if (_.isUndefined(inputs.caseInsensitive)) {
-      inputs.caseInsensitive = true;
-    }
+    // Make a copy of the `regexp` input string.
+    var regexp = inputs.regexp;
 
-    // Check that the regexp is valid
-    var regexp;
+    // Attempt to instantiate `regexp` into a RegExp object.
     try {
-
-      regexp = inputs.regexp;
-
-      /////////////////////////////////////////////////////////
-      // Skip this-- we want users to be able to provide an actual
-      // regexp with all the things (i.e. should be able to use the
-      // star and dot and ? operators, etc)
-      /////////////////////////////////////////////////////////
-      // Then escape the provided string before instantiating
-      // regexp = _.escapeRegExp(regexp);
-      /////////////////////////////////////////////////////////
-
-      // Then construct it
-      // (and if relevant, enable case-insensitivity)
+      // If specified, make it a case-insensitive regexp.
       if (inputs.caseInsensitive) {
         regexp = new RegExp(regexp, 'i');
       }
+      // Otherwise, skip the modifier
       else {
         regexp = new RegExp(regexp);
       }
-    } catch (e) {
+    }
+
+    // If we run into any trouble, trigger the `invalidRegexp` exit.
+    catch (e) {
       return exits.invalidRegexp(e);
     }
 
+    // Use `.split()` to split the input string into an array.
     var substrings = inputs.string.split(regexp);
 
+    // Return the new array through the `success` exit.
     return exits.success(substrings);
 
   }
