@@ -22,9 +22,9 @@ module.exports = {
     },
 
     at: {
-      friendlyName: 'At...',
+      friendlyName: 'Character position',
       description: 'The index to look up within the string.',
-      extendedDescription: 'Strings are indexed starting from the left at 0.',
+      extendedDescription: 'Strings are indexed starting from the left at 0.  This value must be a non-negative integer.',
       example: 7,
       required: true
     }
@@ -41,15 +41,27 @@ module.exports = {
     },
 
     notFound: {
+      friendlyName: 'Out of range',
       description: 'The string doesn\'t have a character at the specified index (i.e. it\'s too short).'
-    },
-
+    }
 
   },
 
 
   fn: function (inputs, exits) {
-    return exits.success(inputs.string.slice(inputs.at, inputs.at+1));
+
+    // If the index is not a non-negative integer, trigger `error`.
+    if (inputs.at !== Math.floor(inputs.at) || inputs.at < 0) {
+      return exits.error(new Error('The configured value for `at` must be a non-negative integer.'));
+    }
+
+    // If the index is >= than the string length, trigger `notFound`.
+    if (inputs.at >= inputs.string.length) {
+      return exits.notFound();
+    }
+
+    // Return the character at the specified index.
+    return exits.success(inputs.string[inputs.at]);
   }
 
 };
