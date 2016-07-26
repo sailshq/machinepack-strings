@@ -4,6 +4,13 @@
     {
       "using": {
         "string": "Three blind mice, three blind mice.  See how they run?",
+        "regexp": "("
+      },
+      "outcome": "invalidRegexp"
+    },
+    {
+      "using": {
+        "string": "Three blind mice, three blind mice.  See how they run?",
         "regexp": "abc"
       },
       "outcome": "notFound"
@@ -16,7 +23,8 @@
       "outcome": "success",
       "returns": {
         "found": "Three",
-        "at": 0
+        "at": 0,
+        "subgroups": []
       }
     },
     {
@@ -28,7 +36,8 @@
       "outcome": "success",
       "returns": {
         "found": "three",
-        "at": 18
+        "at": 18,
+        "subgroups": []
       }
     },
     {
@@ -40,7 +49,8 @@
       "outcome": "success",
       "returns": {
         "found": "Three",
-        "at": 0
+        "at": 0,
+        "subgroups": []
       }
     },
     {
@@ -51,7 +61,8 @@
       "outcome": "success",
       "returns": {
         "found": "run?yeah",
-        "at": 50
+        "at": 50,
+        "subgroups": []
       }
     },
     {
@@ -62,7 +73,8 @@
       "outcome": "success",
       "returns": {
         "found": "mice.",
-        "at": 30
+        "at": 30,
+        "subgroups": []
       }
     },
     {
@@ -73,8 +85,22 @@
       "outcome": "success",
       "returns": {
         "found": "mice",
-        "at": 12
+        "at": 12,
+        "subgroups": []
+      }
+    },
+    {
+      "using": {
+        "string": "Hello world",
+        "regexp": "w(\\w+)(l)d"
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "world",
+        "at": 6,
+        "subgroups": ["or","l"]
       }
     }
+
   ]
 }

@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Search string using regexp',
+  friendlyName: 'Search string using regex',
 
 
   description: 'Search a string using a regular expression and return the first match.',
@@ -24,7 +24,7 @@ module.exports = {
 
     regexp: {
       friendlyName: 'Regular expression',
-      example: 'world',
+      example: 'w(\\w+)d',
       description: 'The regular expression to match against (i.e. "metal detector").',
       extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
       required: true
@@ -45,10 +45,11 @@ module.exports = {
 
     success: {
       outputFriendlyName: 'Matched substring info',
-      outputDescription: 'Information about the matched substring, including its text and position.',
+      outputDescription: 'Information about the matched substring, including its text, position and matching subgroups.',
       outputExample: {
         found: 'world',
-        at: 6
+        at: 6,
+        subgroups: ['orl']
       }
     },
 
@@ -67,48 +68,42 @@ module.exports = {
 
   fn: function (inputs, exits) {
 
+    // Import `lodash`.
     var _ = require('lodash');
 
-    // Case-insensitive by default
-    if (_.isUndefined(inputs.caseInsensitive)) {
-      inputs.caseInsensitive = true;
-    }
+    // Make a copy of the `regexp` input string.
+    var regexp = inputs.regexp;
 
-    // Check that the regexp is valid
-    var regexp;
+    // Attempt to instantiate `regexp` into a RegExp object.
     try {
-
-      regexp = inputs.regexp;
-
-      /////////////////////////////////////////////////////////
-      // Skip this-- we want users to be able to provide an actual
-      // regexp with all the things (i.e. should be able to use the
-      // star and dot and ? operators, etc)
-      /////////////////////////////////////////////////////////
-      // Then escape the provided string before instantiating
-      // regexp = _.escapeRegExp(regexp);
-      /////////////////////////////////////////////////////////
-
-      // Then construct it
-      // (and if relevant, enable case-insensitivity)
+      // If specified, make it a case-insensitive regexp.
       if (inputs.caseInsensitive) {
         regexp = new RegExp(regexp, 'i');
       }
+      // Otherwise, skip the modifier
       else {
         regexp = new RegExp(regexp);
       }
-    } catch (e) {
+    }
+
+    // If we run into any trouble, trigger the `invalidRegexp` exit.
+    catch (e) {
       return exits.invalidRegexp(e);
     }
 
+    // Run the regular expression on the input string.
     var matches = inputs.string.match(regexp);
+
+    // If no matches are found, trigger the `notFound` exit.
     if (!matches) {
       return exits.notFound();
     }
 
+    // Otherwise return information about the primary match and any subgroups.
     return exits.success({
       found: matches[0],
-      at: matches.index
+      at: matches.index,
+      subgroups: matches.slice(1)
     });
 
   }
