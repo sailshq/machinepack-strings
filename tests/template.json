@@ -65,6 +65,18 @@
       },
       "outcome": "success",
       "returns": "Hi there, Miss Piggy!"
+    },
+    {
+      "using": {
+        "templateStr": "Hi there, Miss <% catch %>!",
+        "data": {
+          "me": {
+            "lastName": "piggy"
+          }
+        }
+      },
+      "outcome": "couldNotRender"
     }
+
   ]
 }

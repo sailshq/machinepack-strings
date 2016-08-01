@@ -78,13 +78,22 @@ module.exports = {
     var util = require('util');
     var _ = require('lodash');
 
+    // Declare a var to hold the template function.
+    var templateFn;
     // Build template function outside of our loop below.
-    var templateFn = _.template(inputs.templateStr, {
-      imports: {
-        util: util,
-        _: _
-      }
-    });
+    try {
+      templateFn = _.template(inputs.templateStr, {
+        imports: {
+          util: util,
+          _: _
+        }
+      });
+    }
+    // If there are any problems building the template function,
+    // leave through the `couldNotRender` exit.
+    catch (e) {
+      return exits.couldNotRender(e);
+    }
 
     // Now attempt to render the Lodash template.
     // Templates are provided access to the Node.js `util` library,
