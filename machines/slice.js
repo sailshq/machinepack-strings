@@ -44,7 +44,7 @@ module.exports = {
     success: {
       outputFriendlyName: 'Sliced substring',
       outputDescription: 'The desired slice of the input string.',
-      outputExample: 'Gee'
+      outputExample: 'Ge'
     },
 
   },
