@@ -39,6 +39,14 @@ module.exports = {
       extendedDescription: 'This will build the regular expression using the `/i` modifier.',
       example: true,
       defaultsTo: true
+    },
+
+    multiline: {
+      friendlyName: 'Multiline?',
+      description: 'Whether to treat beginning and end characters (^ and $) as matching each line delimited by \\n or \\r.',
+      extendedDescription: 'This will build the regular expression using the `/m` modifier.',
+      example: true,
+      defaultsTo: false
     }
 
   },
@@ -74,13 +82,30 @@ module.exports = {
 
     // Attempt to instantiate `regexp` into a RegExp object.
     try {
-      // If specified, make it a case-insensitive regexp.
+
+      // Declare a string to hold the requested regex modifiers.
+      // Since this is a global search, we'll always use the "g" modifier.
+      var modifiers = 'g';
+
+      // Add an `i` modifier if case-insensitivity is requested.
       if (inputs.caseInsensitive) {
-        regexp = new RegExp(regexp, 'ig');
+        modifiers += 'i';
       }
-      // Otherwise, skip the case-insensitive modifier
+
+      // Add an `m` modifier if multiline matching is requested.
+      if (inputs.multiline) {
+        modifiers += 'm';
+      }
+
+      // If there are any modifiers, use them when attempting to
+      // create the regular expression.
+      if (modifiers.length) {
+        regexp = new RegExp(regexp, modifiers);
+      }
+
+      // Otherwise attempt to create it without modifiers.
       else {
-        regexp = new RegExp(regexp, 'g');
+        regexp = new RegExp(regexp);
       }
     }
 
