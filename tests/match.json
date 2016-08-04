@@ -6,7 +6,7 @@
         "string": "Three blind mice, three blind mice.  See how they run?",
         "regexp": "("
       },
-      "outcome": "invalidRegexp"
+      "outcome": "error"
     },
     {
       "using": {
