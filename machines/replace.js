@@ -24,7 +24,7 @@ module.exports = {
     regexp: {
       friendlyName: 'Regular expression',
       example: 'World',
-      description: 'The regular expression to match against (i.e. "metal detector").',
+      description: 'The regular expression to match against.',
       extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
       required: true
     },
@@ -36,14 +36,6 @@ module.exports = {
       required: true
     },
 
-    caseInsensitive: {
-      friendlyName: 'Case insensitive?',
-      description: 'Whether or not you care about uppercase/lowercase letters.',
-      extendedDescription: 'This will build the regular expression using the `/i` modifier.',
-      example: true,
-      defaultsTo: true
-    },
-
     global: {
       friendlyName: 'Replace all?',
       description: 'Whether or not to replace all substrings that match the regular expression, or just the first.',
@@ -52,12 +44,23 @@ module.exports = {
       defaultsTo: false
     },
 
+    caseInsensitive: {
+      friendlyName: 'Case insensitive?',
+      description: 'Whether or not you care about uppercase/lowercase letters.',
+      extendedDescription: 'This will build the regular expression using the `/i` modifier.',
+      example: true,
+      defaultsTo: true,
+      advanced: true
+    },
+
+
     multiline: {
       friendlyName: 'Multiline?',
       description: 'Whether to treat beginning and end characters (^ and $) as matching each line delimited by \\n or \\r.',
       extendedDescription: 'This will build the regular expression using the `/m` modifier.',
       example: true,
-      defaultsTo: false
+      defaultsTo: false,
+      advanced: true
     }
 
 

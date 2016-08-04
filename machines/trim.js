@@ -4,6 +4,9 @@ module.exports = {
   friendlyName: 'Trim whitespace',
 
 
+  sideEffects: 'cacheable',
+
+
   sync: true,
 
 

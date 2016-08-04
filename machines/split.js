@@ -34,7 +34,8 @@ module.exports = {
       description: 'Whether or not you care about uppercase/lowercase letters.',
       extendedDescription: 'This will build the regular expression using the `/i` modifier.',
       example: true,
-      defaultsTo: true
+      defaultsTo: true,
+      advanced: true
     }
 
   },
@@ -46,11 +47,6 @@ module.exports = {
       outputFriendlyName: 'Split-up string',
       outputDescription: 'An array of substrings.',
       outputExample: ['Hello']
-    },
-
-    invalidRegexp: {
-      friendlyName: 'Invalid regular expression',
-      description: 'The provided regular expression was invalid (could not be instantiated into a RegExp object).'
     }
 
   },

@@ -24,7 +24,7 @@ module.exports = {
     start: {
       friendlyName: 'Start from index',
       description: 'The index of the first item to include in the new substring.',
-      extendedDescription: 'This index should be zero or a positive number.',
+      extendedDescription: 'This index should be zero or a positive integer.',
       example: 2,
       required: true
     },
@@ -32,8 +32,8 @@ module.exports = {
     end: {
       friendlyName: 'End with index',
       description: 'The index of the last item to include in the new substring.',
-      extendedDescription: 'This index should be zero or a positive number. If this value is omitted, all of the string starting from \'Start from index\' will be returned.',
-      example: 5,
+      extendedDescription: 'This index should be zero or a positive integer. If this value is omitted, all of the string starting from \'Start from index\' will be returned.',
+      example: 3,
     }
 
   },

@@ -35,7 +35,8 @@ module.exports = {
       description: 'Whether or not you care about uppercase/lowercase letters.',
       extendedDescription: 'This will build the regular expression using the `/i` modifier.',
       example: true,
-      defaultsTo: true
+      defaultsTo: true,
+      advanced: true
     },
 
     multiline: {
@@ -43,7 +44,8 @@ module.exports = {
       description: 'Whether to treat beginning and end characters (^ and $) as matching each line delimited by \\n or \\r.',
       extendedDescription: 'This will build the regular expression using the `/m` modifier.',
       example: true,
-      defaultsTo: false
+      defaultsTo: false,
+      advanced: true
     }
 
   },

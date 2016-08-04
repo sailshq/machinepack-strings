@@ -1,7 +1,7 @@
 module.exports = {
 
 
-  friendlyName: 'Get character at...',
+  friendlyName: 'Get character in string',
 
 
   description: 'Get a character from a string at a particular position.',
@@ -42,7 +42,7 @@ module.exports = {
 
     notFound: {
       friendlyName: 'Out of range',
-      description: 'The string doesn\'t have a character at the specified index (i.e. it\'s too short).'
+      description: 'The specified string didn\'t have a character at the specified index (i.e. it was too short).'
     }
 
   },

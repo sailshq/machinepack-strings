@@ -21,15 +21,15 @@ module.exports = {
     string: {
       friendlyName: 'String to search',
       example: 'hello world',
-      description: 'The string to search (i.e. "haystack").',
+      description: 'The string to search.',
       required: true
     },
 
     regexp: {
       friendlyName: 'Regular expression',
       example: 'l(\\w)',
-      description: 'The regular expression to match against (i.e. "metal detector").',
-      extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
+      description: 'The regular expression to match against.',
+      extendedDescription: 'The regular expression should be specified as a string WITHOUT including leading or trailing slashes or modifiers like /gi.',
       required: true
     },
 
@@ -38,7 +38,8 @@ module.exports = {
       description: 'Whether or not you care about uppercase/lowercase letters.',
       extendedDescription: 'This will build the regular expression using the `/i` modifier.',
       example: true,
-      defaultsTo: true
+      defaultsTo: true,
+      advanced: true
     },
 
     multiline: {
@@ -46,7 +47,8 @@ module.exports = {
       description: 'Whether to treat beginning and end characters (^ and $) as matching each line delimited by \\n or \\r.',
       extendedDescription: 'This will build the regular expression using the `/m` modifier.',
       example: true,
-      defaultsTo: false
+      defaultsTo: false,
+      advanced: true
     }
 
   },

@@ -55,7 +55,7 @@ module.exports = {
     // Push the string onto the stream.
     string__.push(inputs.string);
 
-    // Push a null byte to signal EOF
+    // Push a null byte to signal EOF.
     string__.push(null);
 
     // Return the stream through the `success` exit.

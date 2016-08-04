@@ -7,10 +7,13 @@ module.exports = {
   sync: true,
 
 
+  sideEffects: 'cacheable',
+
+
   description: 'If the string is longer than the given maximum length, chop off characters from the end.',
 
 
-  extendedDescription: 'By default, this machine will reduce the string to a maximum of 30 characters, including a 3-character elipses ("...") added to the end.  An additional default behavior of this machine (which can be disabled by disabling the `pretty` option) is to omit trailing spaces and punctuation, and also avoid chopping words in half.',
+  extendedDescription: 'By default, this machine will reduce the string to a maximum of 30 characters, including a 3-character ellipses ("...") added to the end.  An additional default behavior of this machine (which can be disabled by disabling the `pretty` option) is to omit trailing spaces and punctuation, and also avoid chopping words in half.',
 
 
   inputs: {
