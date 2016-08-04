@@ -100,6 +100,26 @@
         "at": 6,
         "subgroups": ["or","l"]
       }
+    },
+    {
+      "using": {
+        "string": "You\nComplete\nMe",
+        "regexp": "^(C|M)\\w"
+      },
+      "outcome": "notFound"
+    },
+    {
+      "using": {
+        "string": "You\nComplete\nMe",
+        "regexp": "^(C|M)\\w",
+        "multiline": true
+      },
+      "outcome": "success",
+      "returns": {
+        "found": "Co",
+        "at": 4,
+        "subgroups": ["C"]
+      }
     }
 
   ]
