@@ -73,11 +73,6 @@ module.exports = {
       outputExample: 'Hello Mumbai!'
     },
 
-    invalidRegexp: {
-      friendlyName: 'Invalid regular expression',
-      description: 'The provided regular expression was invalid (could not be instantiated into a RegExp object).'
-    }
-
   },
 
 
@@ -124,7 +119,7 @@ module.exports = {
 
     // If we run into any trouble, trigger the `invalidRegexp` exit.
     catch (e) {
-      return exits.invalidRegexp(e);
+      return exits.error(new Error('The provided `regexp` input did not represent a valid regular expression.  Make sure it does not contain leading or trailing slashes!'));
     }
 
     // Use the native String .replace() method to replace matches
