@@ -50,7 +50,8 @@
       "to-lower-case",
       "to-upper-case",
       "to-kebab-case",
-      "to-camel-case"
+      "to-camel-case",
+      "is-valid-regex"
     ],
     "testsUrl": "https://travis-ci.org/"
   },
