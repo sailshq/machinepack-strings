@@ -56,11 +56,6 @@ module.exports = {
       }]
     },
 
-    invalidRegexp: {
-      friendlyName: 'Invalid regular expression',
-      description: 'The provided regular expression was invalid (cannot be instantiated into a RegExp object).'
-    },
-
     notFound: {
       friendlyName: 'No matches found',
       description: 'No matches were found.'
@@ -89,9 +84,9 @@ module.exports = {
       }
     }
 
-    // If we run into any trouble, trigger the `invalidRegexp` exit.
+    // If we run into any trouble, trigger the `error` exit.
     catch (e) {
-      return exits.invalidRegexp(e);
+      return exits.error(new Error('The provided `regexp` input did not represent a valid regular expression.  Make sure it does not contain leading or trailing slashes!'));
     }
 
     // Declare an array var to hold the matches
