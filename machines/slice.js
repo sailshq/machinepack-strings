@@ -60,6 +60,11 @@ module.exports = {
       return exits.error('`start` index must be least zero.');
     }
 
+    // If the start value is not a whole number, trigger the `error` exit.
+    if (Math.floor(inputs.start) !== inputs.start) {
+      return exits.error('`start` index must be a whole number.');
+    }
+
     // If no ending index was specified, return everything starting from the start index.
     if (_.isUndefined(inputs.end)) {
       return exits.success(inputs.string.slice(inputs.start));
@@ -70,7 +75,17 @@ module.exports = {
       return exits.error('`end` index must be least zero.');
     }
 
-    // Increment `end` by 1 (since the third arg to `_.slice()` is exclusive),
+    // If the end value is not a whole number, trigger the `error` exit.
+    if (Math.floor(inputs.end) !== inputs.end) {
+      return exits.error('`end` index must be a whole number.');
+    }
+
+    // If the end value is less than the start value, trigger the `error` exit.
+    if (inputs.end < inputs.start) {
+      return exits.error('`end` index must be >= `start` index.');
+    }
+
+    // Increment `end` by 1 (since the second arg to `_.slice()` is exclusive),
     // and return the result of `.slice()` through the `success` exit.
     return exits.success(inputs.string.slice(inputs.start, inputs.end+1));
   },
