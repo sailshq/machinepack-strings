@@ -12,6 +12,9 @@ module.exports = {
   sync: true,
 
 
+  sideEffects: 'cacheable',
+
+
   inputs: {},
 
 
