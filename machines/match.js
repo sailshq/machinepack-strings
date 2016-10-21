@@ -26,7 +26,7 @@ module.exports = {
       friendlyName: 'Regular expression',
       example: 'w(\\w+)d',
       description: 'The regular expression to match against (i.e. "metal detector").',
-      extendedDescription: 'The regular expression should be specified as a string WIHOUUT including leading or trailing slashes or modifiers like /gi.',
+      extendedDescription: 'The regular expression should be specified as a string WITHOUT including leading or trailing slashes or modifiers like /gi.',
       required: true
     },
 
