@@ -30,6 +30,7 @@ module.exports = {
         'The regular expression should be specified as a string WITHOUT including leading or trailing slashes '+
         'or modifiers like `/gi`.  For example, don\'t type `/f[o]+/i`.  Instead, type `f[o]+` and also set '+
         '"Case insensitive?" to true.',
+      moreInfoUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp',
       required: true
     },
 
