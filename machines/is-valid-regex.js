@@ -21,7 +21,10 @@ module.exports = {
     string: {
       example: 'h(e\\w)+llo w[ou]rld',
       description: 'The string to test as a regular expression.',
-      extendedDescription: 'Do not include leading or trailing slashes in the string.',
+      extendedDescription:
+        'The regular expression should be specified as a string WITHOUT including leading or trailing slashes '+
+        'or modifiers like `/gi`.  For example, don\'t type `/f[o]+/i`.  Instead, type `f[o]+`.',
+      moreInfoUrl: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp',
       required: true
     }
 
