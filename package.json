@@ -3,7 +3,9 @@
   "version": "5.1.0",
   "description": "Work with strings.",
   "scripts": {
-    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js && mocha tests/**/*.js"
+    "test": "npm run lint && npm run custom-tests && echo 'Done.'",
+    "lint": "node ./node_modules/eslint/bin/eslint . --max-warnings=0 && echo '✔  Your code looks good.'",
+    "custom-tests": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js && node node_modules/mocha/bin/mocha"
   },
   "keywords": [
     "Strings",
@@ -13,14 +15,14 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
+    "@sailshq/lodash": "3.10.2",
     "browserify-transform-machinepack": "^1.0.3",
     "hat": "0.0.3",
-    "lodash": "3.10.1",
-    "machine": "^13.0.0-10",
+    "machine": "^15.0.0-2",
     "uuid": "2.0.2"
   },
   "devDependencies": {
-    "mocha": "^2.5.3",
+    "mocha": "3.0.2",
     "test-machinepack-mocha": "^2.1.3"
   },
   "browserify": {
@@ -30,7 +32,7 @@
   },
   "machinepack": {
     "friendlyName": "Strings",
-    "machineDir": "machines/",
+    "machineDir": "lib/",
     "machines": [
       "match",
       "match-global",
