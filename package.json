@@ -19,7 +19,7 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
-    "@sailshq/lodash": "3.10.2",
+    "@sailshq/lodash": "^3.10.2",
     "browserify-transform-machinepack": "^1.0.3",
     "hat": "0.0.3",
     "machine": "^15.0.0-2",
