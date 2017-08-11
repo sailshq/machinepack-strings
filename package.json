@@ -21,7 +21,6 @@
   "dependencies": {
     "@sailshq/lodash": "^3.10.2",
     "browserify-transform-machinepack": "^1.0.3",
-    "hat": "0.0.3",
     "machine": "^15.0.0-2",
     "uuid": "2.0.2"
   },
