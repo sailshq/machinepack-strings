@@ -1,6 +1,6 @@
 {
   "name": "machinepack-strings",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Work with strings.",
   "scripts": {
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
