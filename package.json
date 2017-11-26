@@ -53,6 +53,7 @@
       "template",
       "ensure-uniq",
       "to-stream",
+      "from-stream",
       "random",
       "to-lower-case",
       "to-upper-case",
